@@ -32,12 +32,15 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Custom Color Overrides -->
+    <link href="css/custom-overrides.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #C7C6C3;">
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="background-color: #C7C6C3;">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -46,10 +49,10 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
         <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h2 class="mb-0 text-primary text-uppercase">SNS Institutions</h2>
+                <img src="img/logo.png" alt="SNS Institutions" style="height: 60px;">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -66,21 +69,20 @@
 
         <!-- 3D Model Container - Full Viewport -->
         <div id="model-3d-container" style="width: 100vw; height: 100vh; position: relative; background: transparent;">
-            <!-- 3D model will be added here manually -->
+            <iframe src='https://my.spline.design/nexbotrobotcharacterconcept-11WGoL8vp1RhiA97mOv2Dezr/' frameborder='0' width='100%' height='100%'></iframe>
         </div>
         <!-- 3D Model Container End -->
     </div>
     <!-- Header End -->
 
-
     <!-- Opening Section Start -->
-    <div class="container-fluid bg-secondary">
+    <div class="container-fluid" style="background-color: #C7C6C3; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); margin-top: 0;">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-12 pb-0 pb-lg-5 py-5">
-                    <div class="pb-0 pb-lg-5 py-5 text-center">
+                <div class="col-lg-6 py-5">
+                    <div class="py-5">
                         <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="title-center">
+                            <div class="title-left">
                                 <h5>After +2. What's Next?</h5>
                                 <h1>We help you get career-ready!</h1>
                             </div>
@@ -89,24 +91,40 @@
                         <p class="mb-4 wow fadeInUp" data-wow-delay="0.3s">As a pioneer in future-ready education, SNS has partnered with Analytics Vidhya - India's leading AI & Data Science learning platform to bring you industry-powered learning that helps you skill yourself today for the jobs of tomorrow.</p>
                     </div>
                 </div>
+                <div class="col-lg-6 py-5">
+                    <div class="p-5 wow fadeInRight" data-wow-delay="0.2s">
+                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999;">
+                            <p style="color: #666; font-size: 18px;">Image Placeholder</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Opening Section End -->
 
     <!-- GenZ Section Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" style="box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
         <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5>GenZ - switch to pro mode.</h5>
-                        <h1>No more boring learning. Real skills only.</h1>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999;">
+                            <p style="color: #666; font-size: 18px;">Image Placeholder</p>
+                        </div>
                     </div>
                 </div>
-                <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.2s">Not waiting for the future - creating it.</p>
-                <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">This is learning built for you - fast, practical, hands-on, and career-focused.</p>
-                <p class="mb-5 wow fadeInUp" data-wow-delay="0.4s">Through this exclusive partnership with Analytics Vidhya, 2000+ students have already benefited, gaining real-world skills, confidence, and industry-recognized credentials.</p>
+                <div class="col-lg-6">
+                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-left">
+                            <h5>GenZ - switch to pro mode.</h5>
+                            <h1>No more boring learning. Real skills only.</h1>
+                        </div>
+                    </div>
+                    <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.2s">Not waiting for the future - creating it.</p>
+                    <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">This is learning built for you - fast, practical, hands-on, and career-focused.</p>
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.4s">Through this exclusive partnership with Analytics Vidhya, 2000+ students have already benefited, gaining real-world skills, confidence, and industry-recognized credentials.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -114,7 +132,7 @@
 
 
     <!-- Programs Start -->
-    <div class="container-fluid py-5 bg-secondary">
+    <div class="container-fluid py-5" style="background-color: #C7C6C3; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -128,7 +146,7 @@
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <!-- Image placeholder - will be added manually -->
+                            <img class="img-fluid rounded-circle" src="img/blackbelt.jpg" alt="AI & ML Blackbelt Plus">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -201,63 +219,29 @@
     <!-- Programs End -->
 
 
-    <!-- Certification Section Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-0 justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="title-center">
-                            <h5>Global Edge</h5>
-                            <h1>A degree backed by an industry-recognized certification.</h1>
-                        </div>
-                    </div>
-                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">Yes - even before your 4 years of college are over, you will earn a certification from Western State University, giving you a global edge while you are still a student.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Certification Section End -->
-
-    <!-- Mentorship Section Start -->
-    <div class="container-fluid py-5 bg-secondary">
-        <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5>Support</h5>
-                        <h1>And you are never learning alone.</h1>
-                    </div>
-                </div>
-                <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">You get hands-on mentor support at every step - from projects to problem-solving to placements.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Mentorship Section End -->
-
-
-    <!-- Call to Action Start -->
+    <!-- Combined Section Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
                     <div class="title-center">
-                        <h1 class="display-3">YOUR AI JOURNEY STARTS HERE</h1>
+                        <h1>LEARN AI | BUILD SMART | GET HIRED</h1>
                     </div>
                 </div>
-                <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">Not everyone just studies.<br>Some students move the world.</p>
-                <h2 class="display-5 wow fadeInUp" data-wow-delay="0.3s">LEARN AI | BUILD SMART | GET HIRED</h2>
+                <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">Yes - even before your 4 years of college are over, you will earn a certification from Western State University, giving you a global edge while you are still a student. You get hands-on mentor support at every step - from projects to problem-solving to placements.</p>
+                <p class="fs-3 mb-3 wow fadeInUp" data-wow-delay="0.3s">YOUR AI JOURNEY STARTS HERE</p>
+                <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">Not everyone just studies. Some students move the world.</p>
             </div>
         </div>
     </div>
-    <!-- Call to Action End -->
+    <!-- Combined Section End -->
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #C7C6C3;">
         <div class="container text-center py-5">
             <a href="index.html">
-                <h1 class="display-4 mb-3 text-white text-uppercase">SNS Institutions</h1>
+                <h1 class="display-4 mb-3 text-dark text-uppercase">SNS Institutions</h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
@@ -271,9 +255,6 @@
             </div>
             <p>&copy; <a class="border-bottom" href="#">SNS Institutions</a>, All Right Reserved.</p>
 
-            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-            <p class="mb-0">Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>. Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>.</p>
         </div>
     </div>
     <!-- Footer End -->

@@ -1,0 +1,79 @@
+/* Custom color overrides for theme */
+body {
+    color: #000000 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.container-fluid > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+    color: #000000 !important;
+}
+
+.text-white, .text-light {
+    color: #000000 !important;
+}
+
+.bg-dark, .bg-secondary {
+    background-color: #C7C6C3 !important;
+}
+
+.btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-primary {
+    color: #000000 !important;
+    border-color: #ffcc00 !important;
+    background-color: #ffcc00 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #e6b800 !important;
+    border-color: #e6b800 !important;
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    color: #000000 !important;
+}
+
+.text-primary {
+    color: #000000 !important;
+}
+
+.footer a {
+    color: #000000 !important;
+}
+
+.border-bottom {
+    border-bottom-color: #000000 !important;
+}
+
+/* Hide Spline watermark */
+#model-3d-container {
+    position: relative;
+}
+
+#model-3d-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    background-color: #C7C6C3;
+    z-index: 10;
+    pointer-events: none;
+}
