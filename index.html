@@ -9,7 +9,7 @@
     <meta content="SNS Institutions partners with Analytics Vidhya to offer industry-powered AI & ML education programs" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,51 +38,57 @@
 <body style="background-color: #C7C6C3;">
 
     <!-- Header Start -->
-    <div class="container-fluid p-0" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <img src="img/logo.png" alt="SNS Institutions" style="height: 60px;">
+    <div class="container-fluid p-0" style="background-color: #ffcc00; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+        <div class="d-flex justify-content-between align-items-center px-4 py-3">
+            <a href="index.html">
+                <img src="img/uplogo.jpeg" alt="SNS Institutions - Analytics Vidhya Partnership" style="height: 50px; border-radius: 10px;">
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto p-4 p-lg-0">
-                </div>
-                <div class="d-flex">
-                    <a class="btn btn-outline-primary border-2" href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
-                </div>
+            
+            <div class="d-flex gap-4">
+                <a href="#home" class="nav-pill">Home</a>
+                <a href="#programs" class="nav-pill">Programs</a>
+                <a href="#about" class="nav-pill">About Us</a>
             </div>
-        </nav>
-
-        <!-- 3D Model Container - Full Viewport -->
-        <div id="model-3d-container" style="width: 100vw; height: 100vh; position: relative; background: transparent;">
-            <iframe src='https://my.spline.design/nexbotrobotcharacterconcept-11WGoL8vp1RhiA97mOv2Dezr/' frameborder='0' width='100%' height='100%' allow="autoplay"></iframe>
+            
+            <a class="btn btn-outline-primary border-2 px-4 py-2" href="#" data-bs-toggle="modal" data-bs-target="#enrollModal" style="border-radius: 25px; font-weight: 600;">Enroll Now</a>
         </div>
-        <!-- 3D Model Container End -->
     </div>
     <!-- Header End -->
 
+    <!-- 3D Model Container - Full Viewport -->
+    <div id="home" style="width: 100vw; height: 100vh; position: relative; background: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding-top: 86px; overflow: hidden;">
+        <iframe src='https://my.spline.design/nexbotrobotcharacterconcept-11WGoL8vp1RhiA97mOv2Dezr/' frameborder='0' width='100%' height='100%' allow="autoplay"></iframe>
+        
+        <!-- Halftone Dots Only Around Robot Area -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 1; mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%); -webkit-mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%);"></div>
+        
+        <!-- Watermark Patch -->
+        <div style="position: absolute; bottom: 0; right: 0; width: 200px; height: 60px; background-color: #ffcc00; z-index: 999; pointer-events: auto; cursor: default;"></div>
+    </div>
+    <!-- 3D Model Container End -->
+
     <!-- Opening Section Start -->
-    <div class="container-fluid" style="background-color: #C7C6C3; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); margin-top: 0;">
+    <div class="container-fluid" style="background-color: #ffffff; margin-top: 0;">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-5">
-                    <div class="py-5">
+                    <div class="py-5" style="background-color: #ffcc00; border-radius: 15px; padding: 40px;">
                         <div class="title wow fadeInUp" data-wow-delay="0.1s">
                             <div class="title-left">
-                                <h5>After +2. What's Next?</h5>
-                                <h1>We help you get career-ready!</h1>
+                                <h5 style="color: #000000;">After +2. What's Next?</h5>
+                                <h1 style="color: #000000;">We help you get career-ready!</h1>
                             </div>
                         </div>
-                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Because education is more than academics, SNS Institutions builds skills, confidence, and career-ready professionals.</p>
-                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.3s">As a pioneer in future-ready education, SNS has partnered with Analytics Vidhya - India's leading AI & Data Science learning platform to bring you industry-powered learning that helps you skill yourself today for the jobs of tomorrow.</p>
+                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s" style="color: #000000;">Because education is more than academics, SNS Institutions builds skills, confidence, and career-ready professionals.</p>
+                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.3s" style="color: #000000;">As a pioneer in future-ready education, SNS has partnered with Analytics Vidhya - India's leading AI & Data Science learning platform to bring you industry-powered learning that helps you skill yourself today for the jobs of tomorrow.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 py-5">
-                    <div class="p-5 wow fadeInRight" data-wow-delay="0.2s">
-                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999;">
+                    <div class="p-5 wow fadeInRight" data-wow-delay="0.2s" style="position: relative;">
+                        <!-- Halftone Dots Behind Placeholder (Bottom & Right Only) -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 0; mask-image: linear-gradient(135deg, transparent 0%, transparent 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.3) 90%, transparent 100%); -webkit-mask-image: linear-gradient(135deg, transparent 0%, transparent 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.3) 90%, transparent 100%);"></div>
+                        
+                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999; position: relative; z-index: 1;">
                             <p style="color: #666; font-size: 18px;">Image Placeholder</p>
                         </div>
                     </div>
@@ -93,26 +99,31 @@
     <!-- Opening Section End -->
 
     <!-- GenZ Section Start -->
-    <div class="container-fluid py-5" style="box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+    <div class="container-fluid py-5" style="background-color: #ffffff;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999;">
+                    <div class="p-5 wow fadeInLeft" data-wow-delay="0.2s" style="position: relative;">
+                        <!-- Halftone Dots Behind Placeholder (Bottom & Left Only) -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 0; mask-image: linear-gradient(225deg, transparent 0%, transparent 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.3) 90%, transparent 100%); -webkit-mask-image: linear-gradient(225deg, transparent 0%, transparent 40%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.3) 90%, transparent 100%);"></div>
+                        
+                        <div style="width: 100%; height: 400px; background-color: #e8e8e8; border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 2px dashed #999; position: relative; z-index: 1;">
                             <p style="color: #666; font-size: 18px;">Image Placeholder</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="title-left">
-                            <h5>GenZ - switch to pro mode.</h5>
-                            <h1>No more boring learning. Real skills only.</h1>
+                    <div style="background-color: #ffcc00; border-radius: 15px; padding: 40px;">
+                        <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="title-left">
+                                <h5 style="color: #000000;">GenZ - switch to pro mode.</h5>
+                                <h1 style="color: #000000;">No more boring learning. Real skills only.</h1>
+                            </div>
                         </div>
+                        <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.2s" style="color: #000000;">Not waiting for the future - creating it.</p>
+                        <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.3s" style="color: #000000;">This is learning built for you - fast, practical, hands-on, and career-focused.</p>
+                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.4s" style="color: #000000;">Through this exclusive partnership with Analytics Vidhya, 2000+ students have already benefited, gaining real-world skills, confidence, and industry-recognized credentials.</p>
                     </div>
-                    <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.2s">Not waiting for the future - creating it.</p>
-                    <p class="fs-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">This is learning built for you - fast, practical, hands-on, and career-focused.</p>
-                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.4s">Through this exclusive partnership with Analytics Vidhya, 2000+ students have already benefited, gaining real-world skills, confidence, and industry-recognized credentials.</p>
                 </div>
             </div>
         </div>
@@ -121,7 +132,7 @@
 
 
     <!-- Programs Start -->
-    <div class="container-fluid py-5" style="background-color: #C7C6C3; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+    <div id="programs" class="container-fluid py-5" style="background-color: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -141,7 +152,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
                             <h3>1. AI & ML BLACKBELT PLUS — Become an AI Expert</h3>
                             <p class="mb-3">"Train like a Professional. Think like a Leader."</p>
                             <p class="mb-3">This is for students who want to master Artificial Intelligence and Machine Learning at a deep level.</p>
@@ -167,7 +178,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="service-text px-5 py-md-5 wow fadeInLeft" data-wow-delay="0.5s">
+                        <div class="service-text px-5 py-md-5 wow fadeInLeft" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
                             <h3>2. GenAI PINNACLE PLUS — Build the Future with Generative AI</h3>
                             <p class="mb-3">"From User to Creator of AI."</p>
                             <p class="mb-3">This program takes you into the exciting world of Generative AI — the technology behind ChatGPT, image generators, and smart automation tools.</p>
@@ -193,7 +204,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="service-text px-5 px-md-5 py-5 py-md-5 wow fadeInRight" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
                             <h3>3. AGENTIC AI PIONEER — Design Intelligent AI Agents</h3>
                             <p class="mb-3">"Teach AI to Think and Act on Its Own."</p>
                             <p class="mb-3">This is a futuristic program where you learn to build Agentic AI — AI systems that can plan, make decisions, and take actions independently.</p>
@@ -215,17 +226,52 @@
 
 
     <!-- Combined Section Start -->
-    <div class="container-fluid py-5">
+    <div id="about" class="container-fluid py-5" style="background-color: #ffcc00;">
         <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h1>LEARN AI | BUILD SMART | GET HIRED</h1>
+            <!-- Main Title with Gradient Border -->
+            <div class="text-center mb-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 style="font-size: 3.5rem; font-weight: 800; color: #000000; text-transform: uppercase; letter-spacing: 2px; padding-bottom: 20px; border-bottom: 5px solid #000000; display: inline-block; margin-bottom: 40px;">
+                        LEARN AI | BUILD SMART | GET HIRED
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Stats Counter Section -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div style="background-color: #000000; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <h2 style="font-size: 4rem; font-weight: 800; margin: 0; color: #ffffff;">2000+</h2>
+                        <p style="font-size: 1.2rem; margin: 10px 0 0 0; text-transform: uppercase; letter-spacing: 1px; color: #ffffff;">Students Benefited</p>
                     </div>
                 </div>
-                <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">Yes - even before your 4 years of college are over, you will earn a certification from Western State University, giving you a global edge while you are still a student. You get hands-on mentor support at every step - from projects to problem-solving to placements.</p>
-                <p class="fs-3 mb-3 wow fadeInUp" data-wow-delay="0.3s">YOUR AI JOURNEY STARTS HERE</p>
-                <p class="fs-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">Not everyone just studies. Some students move the world.</p>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div style="background-color: #000000; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <h2 style="font-size: 4rem; font-weight: 800; margin: 0; color: #ffffff;">3</h2>
+                        <p style="font-size: 1.2rem; margin: 10px 0 0 0; text-transform: uppercase; letter-spacing: 1px; color: #ffffff;">Flagship Programs</p>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div style="background-color: #000000; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <h2 style="font-size: 4rem; font-weight: 800; margin: 0; color: #ffffff;">100%</h2>
+                        <p style="font-size: 1.2rem; margin: 10px 0 0 0; text-transform: uppercase; letter-spacing: 1px; color: #ffffff;">Placement Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="text-center">
+                <div style="background-color: #f8f9fa; padding: 50px; border-radius: 20px; margin: 0 auto; max-width: 1100px; border: 3px solid #000000;" class="wow fadeInUp" data-wow-delay="0.5s">
+                    <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 30px; color: #000000 !important;">
+                        Yes - even before your 4 years of college are over, you will earn a certification from <strong style="color: #000000 !important;">Western State University</strong>, giving you a global edge while you are still a student. You get hands-on mentor support at every step - from projects to problem-solving to placements.
+                    </p>
+                    <h3 style="font-size: 2.5rem; font-weight: 700; margin: 30px 0; color: #000000 !important; text-transform: uppercase; letter-spacing: 2px;">
+                        YOUR AI JOURNEY STARTS HERE
+                    </h3>
+                    <p style="font-size: 1.5rem; font-weight: 600; margin: 0; font-style: italic; color: #000000 !important;">
+                        Not everyone just studies. Some students move the world.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -278,7 +324,7 @@
     <!-- Enrollment Modal End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #C7C6C3;">
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
         <div class="container text-center py-5">
             <a href="index.html">
                 <h1 class="display-4 mb-3 text-dark text-uppercase">SNS Institutions</h1>
