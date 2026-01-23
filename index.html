@@ -46,11 +46,12 @@
             
             <div class="nav-links">
                 <a href="#home" class="nav-pill">Home</a>
-                <a href="#programs" class="nav-pill">Programs</a>
-                <a href="#about" class="nav-pill">About Us</a>
+                <a href="#programs" class="nav-pill">About Us</a>
+                <a href="#about" class="nav-pill">Programs</a>
+                <a href="#testimonial" class="nav-pill">Testimonial</a>
             </div>
             
-            <a class="btn btn-outline-primary border-2 enroll-btn" href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
+            <a class="btn btn-outline-primary border-2 enroll-btn" href="#" data-bs-toggle="modal" data-bs-target="#enrollModal"> Enquiry Now</a>
         </div>
     </div>
     <!-- Header End -->
@@ -73,7 +74,7 @@
         </div>
         
         <!-- Watermark Patch -->
-        <div style="position: absolute; bottom: 0; right: 0; width: 200px; height: 60px; background-color: #ffcc00; z-index: 999; pointer-events: auto; cursor: default;"></div>
+        <div class="watermark-patch" style="position: absolute; bottom: 0; right: 0; width: 200px; height: 60px; background-color: #ffcc00; z-index: 999; pointer-events: none;"></div>
     </div>
     <!-- 3D Model Container End -->
 
@@ -160,8 +161,8 @@
         }
         
         .nav-pill:hover {
-            background-color: rgba(0,0,0,0.1);
-            color: #000000;
+            background-color: #000000;
+            color: #ffcc00;
         }
         
         .logo-img {
@@ -174,6 +175,12 @@
             font-weight: 600;
             padding: 10px 20px;
             white-space: nowrap;
+        }
+        
+        .enroll-btn:hover {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #000000 !important;
         }
         
         /* Mobile Navbar Styles */
@@ -278,6 +285,74 @@
             }
         }
         
+        /* Mobile Responsive - Robot Section */
+        @media (max-width: 768px) {
+            #home {
+                height: 100vh;
+                padding-top: 120px !important;
+            }
+            
+            #home .wow h3 {
+                font-size: 1rem !important;
+                letter-spacing: 1px !important;
+            }
+            
+            #home .wow h3 span {
+                font-size: 0.85rem !important;
+            }
+            
+            #home .wow:first-of-type {
+                bottom: auto !important;
+                top: 140px !important;
+                left: 20px !important;
+                max-width: 180px !important;
+            }
+            
+            #home .wow:nth-of-type(2) {
+                bottom: auto !important;
+                top: 140px !important;
+                right: 20px !important;
+                max-width: 180px !important;
+            }
+            
+            .watermark-patch {
+                width: 150px !important;
+                height: 50px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #home {
+                padding-top: 100px !important;
+            }
+            
+            #home .wow h3 {
+                font-size: 0.75rem !important;
+                letter-spacing: 0.5px !important;
+            }
+            
+            #home .wow h3 span {
+                font-size: 0.65rem !important;
+            }
+            
+            #home .wow:first-of-type {
+                top: 110px !important;
+                left: 15px !important;
+                max-width: 130px !important;
+            }
+            
+            #home .wow:nth-of-type(2) {
+                top: 110px !important;
+                right: 15px !important;
+                max-width: 130px !important;
+            }
+            
+            .watermark-patch {
+                width: 120px !important;
+                height: 40px !important;
+            }
+        }
+        
         /* Desktop */
         @media (min-width: 769px) {
             .flagship-image-container.rounded-left {
@@ -304,7 +379,7 @@
     </style>
 
     <!-- Opening Section Start -->
-    <div class="container-fluid" style="background-color: #ffffff; margin-top: 0;">
+    <div id="about" class="container-fluid" style="background-color: #ffffff; margin-top: 0;">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-5">
@@ -333,6 +408,19 @@
         </div>
     </div>
     <!-- Opening Section End -->
+
+    <!-- Roadmap Section Start -->
+    <div class="container-fluid py-5" style="background-color: #ffcc00;">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 2.5rem; font-weight: 800; color: #000000; text-transform: uppercase; letter-spacing: 2px;">Personalized Roadmap</h2>
+            </div>
+            <div class="wow fadeInUp" data-wow-delay="0.2s" style="overflow: hidden;">
+                <img src="img/WhatsApp Image 2026-01-23 at 10.38.51 PM.jpeg" alt="Personalized Roadmap" style="width: 100%; height: auto; display: block; object-fit: cover; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+    </div>
+    <!-- Roadmap Section End -->
 
     <!-- GenZ Section Start -->
     <div class="container-fluid py-5" style="background-color: #ffffff;">
@@ -462,7 +550,7 @@
 
 
     <!-- Combined Section Start -->
-    <div id="about" class="container-fluid py-5" style="background-color: #ffffff; position: relative;">
+    <div id="testimonial" class="container-fluid py-5" style="background-color: #ffffff; position: relative;">
         <div class="container py-5" style="position: relative; z-index: 1;">
             <!-- Main Title with Gradient Border -->
             <div class="text-center mb-5">
@@ -513,6 +601,77 @@
     </div>
     <!-- Combined Section End -->
 
+    <!-- Testimonials Section Start -->
+    <div class="container-fluid py-5" style="background-color: #ffcc00;">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 2.5rem; font-weight: 800; color: #ffcc00; text-transform: uppercase; letter-spacing: 2px;">
+                    TESTIMONIALS
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay="0.2s" style="color: #666; margin-top: 15px;">
+                    
+                </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #d0d0d0; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user" style="font-size: 2rem; color: #999;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1;">"</p>
+                        <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem;">
+                            Like this vide and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.
+                        </p>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1; text-align: right;">"</p>
+                        <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Avinash Kr</h5>
+                        <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">Co-founder at xyz</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #d0d0d0; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user" style="font-size: 2rem; color: #999;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1;">"</p>
+                        <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem;">
+                            Like this vide and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.
+                        </p>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1; text-align: right;">"</p>
+                        <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Bharat Kunal</h5>
+                        <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">Manager at xyz</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #d0d0d0; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user" style="font-size: 2rem; color: #999;"></i>
+                            </div>
+                        </div>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1;">"</p>
+                        <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem;">
+                            Like this vide and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.
+                        </p>
+                        <p style="color: #ffcc00; font-size: 2rem; margin: 0 0 15px 0; line-height: 1; text-align: right;">"</p>
+                        <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Prabhakar D</h5>
+                        <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">Founder / CEO at xyz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Section End -->
+
     <!-- Enrollment Modal -->
     <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -559,13 +718,8 @@
     </div>
     <!-- Enrollment Modal End -->
 
-    <!-- Dot Effect Section Above Footer -->
-    <div style="background-color: #ffffff; height: 100px; position: relative; overflow: hidden; margin: 0; padding: 0; width: 100vw; margin-left: calc(-50vw + 50%);">
-        <div style="position: absolute; bottom: 0; left: 0; width: 60%; height: 100%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 0; mask-image: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 50%, transparent 70%); -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 50%, transparent 70%); animation: dotFloat 5s ease-in-out infinite, dotPulse 4s ease-in-out infinite;"></div>
-    </div>
-
     <!-- Footer Start -->
-    <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
+    <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ffffff; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
         <div class="container text-center py-3">
             <a href="index.html">
                 <h1 class="mb-2 text-dark text-uppercase" style="font-size: 2rem; font-weight: 700;">SNS Institutions</h1>
