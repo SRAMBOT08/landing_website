@@ -60,6 +60,18 @@
     color: #000000;
 }
 
+.btn-outline-primary:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.navbar .btn-outline-primary:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #000000 !important;
+}
+
 
 /*** Navbar ***/
 .navbar {
