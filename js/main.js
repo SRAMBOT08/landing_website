@@ -16,6 +16,21 @@
     new WOW().init();
 
 
+    // Smooth scrolling for anchor links - DISABLED for multi-page navigation
+    // Multi-page website uses separate HTML files instead of anchor scrolling
+    /*
+    $('a[href^="#"]').on('click', function (e) {
+        var target = $(this.hash);
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - 70
+            }, 1000, 'easeInOutExpo');
+        }
+    });
+    */
+
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {

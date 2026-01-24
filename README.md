@@ -1,21 +1,22 @@
-# SNS Institutions AI Education Landing Page
+# GDTA 2026 Conference Website
 
-A professional single-page website for SNS Institutions showcasing AI and Machine Learning education programs in partnership with Analytics Vidhya. The website features an interactive 3D robot model, program showcases, and an enrollment form.
+A professional multi-page website for the Global Design Thinking Alliance (GDTA) 2026 Conference. The website features a modern dark theme design, smooth animations, and comprehensive information about the conference theme "Chaos & Clarity" taking place on September 29-30, 2026.
 
 ## Project Overview
 
-This landing page was developed to promote SNS Institutions' flagship AI and ML education programs. The website combines modern web design with interactive 3D elements to create an engaging user experience for prospective students.
+This website was developed to promote the GDTA 2026 Conference hosted by SNS Institutions. The website combines modern web design with a sophisticated dark theme and smooth animations to create an engaging user experience for prospective attendees.
 
 ### Key Features
 
-- Interactive 3D robot model powered by Spline
-- Single-page responsive design
-- Three flagship AI/ML program showcases
-- Modal-based enrollment form
+- Multi-page responsive design with 11 distinct pages
+- Modern dark theme with gold accent colors
+- Comprehensive conference information (schedule, sessions, speakers)
+- Registration form with dietary requirements and design safari options
+- Dropdown navigation menus for organized content
 - Social media integration (Instagram, YouTube, LinkedIn)
-- Shadow effects and smooth animations
+- Smooth WOW.js animations throughout
 - Mobile-responsive layout
-- Custom color scheme matching brand identity
+- GDTA custom color scheme (#1F1F1F, #2B2B2B, #F2B705)
 
 ## Technology Stack
 
@@ -33,10 +34,15 @@ This landing page was developed to promote SNS Institutions' flagship AI and ML 
 - Waypoints.js (scroll-triggered events)
 - Font Awesome 7.0.0 (icons)
 - Bootstrap Icons
-- Google Fonts (Josefin Sans, Work Sans)
+- Google Fonts (Montserrat, Open Sans)
 
-### 3D Integration
-- Spline 3D (embedded iframe for robot model)
+### Theme Colors
+- Primary Background: #1F1F1F
+- Card Background: #2B2B2B
+- Accent Color: #F2B705 (Gold)
+- Text Primary: #FFFFFF
+- Text Secondary: #D1D1D1
+- Text Muted: #9CA3AF
 
 ### Version Control
 - Git
@@ -45,21 +51,21 @@ This landing page was developed to promote SNS Institutions' flagship AI and ML 
 ## Project Structure
 
 ```
-landing/
+GDTA2026/
 │
 ├── css/
 │   ├── bootstrap.min.css          # Bootstrap framework styles
 │   ├── style.css                  # Main template stylesheet
-│   └── custom-overrides.css       # Custom color and style overrides
+│   └── custom-overrides.css       # GDTA theme color overrides
 │
 ├── img/
-│   ├── logo.png                   # SNS Institutions logo
-│   ├── blackbelt.jpg              # AI & ML Blackbelt program image
-│   ├── av.png                     # Analytics Vidhya logo
-│   └── [other image assets]
+│   ├── placeholder-hero.jpg       # Hero section background placeholder
+│   ├── placeholder-section.jpg    # General section image placeholder
+│   ├── placeholder-card.jpg       # Card image placeholder
+│   └── placeholder-logo.png       # Logo placeholder
 │
 ├── js/
-│   └── main.js                    # Main JavaScript functionality
+│   └── main.js                    # Main JavaScript (smooth scroll disabled)
 │
 ├── lib/
 │   ├── animate/
@@ -68,102 +74,163 @@ landing/
 │   ├── easing/
 │   │   ├── easing.js
 │   │   └── easing.min.js
+│   ├── lightbox/
+│   ├── owlcarousel/
 │   ├── waypoints/
 │   │   └── waypoints.min.js
 │   └── wow/
 │       ├── wow.js
 │       └── wow.min.js
 │
-├── index.html                     # Main landing page
+├── index.html                     # Home page
+├── about-gdta.html                # About GDTA organization
+├── about-gdta-2026.html           # About GDTA 2026 conference
+├── about-sns.html                 # About SNS Institutions (host)
+├── program-schedule.html          # Conference schedule (2 days)
+├── program-sessions.html          # Keynote speakers & sessions
+├── program-safari.html            # Design safari details
+├── travel-stay.html               # Travel & accommodation info
+├── sponsors.html                  # Sponsors & partners
+├── contact.html                   # Contact form
+├── register.html                  # Conference registration
 ├── README.md                      # Project documentation
-├── LICENSE.txt                    # License information
-└── .venv/                        # Python virtual environment (for development)
+└── index_backup.html              # Original SNS AI Education backup
 ```
 
-## Page Sections
+## Website Pages
 
-### 1. Header Section
-- SNS Institutions logo
-- Enroll Now button with modal trigger
-- Sticky navigation
+### 1. Home Page (index.html)
+- Hero section with conference title and dates
+- Welcome message explaining "Chaos & Clarity" theme
+- Key highlights cards (networking, learning, design safari)
+- Call-to-action to registration
 
-### 2. Hero Section
-- Full viewport 3D robot model (Spline embed)
-- Interactive and auto-loading animation
+### 2. About Section
+**About GDTA (about-gdta.html)**
+- GDTA organization overview
+- Mission and vision
+- History and impact
 
-### 3. Opening Section
-- Introduction to SNS Institutions
-- Partnership with Analytics Vidhya
-- Image placeholder for additional content
+**About GDTA 2026 (about-gdta-2026.html)**
+- Conference theme: "Chaos & Clarity"
+- Objectives and goals
+- Expected outcomes
+- Target audience
 
-### 4. GenZ Section
-- Target audience messaging
-- Benefits of the programs
-- Image placeholder for additional content
+**About SNS Institutions (about-sns.html)**
+- Venue information
+- SNS Institutions background
+- Facilities and location
+- Why SNS as host
 
-### 5. Programs Section
-Three flagship programs with individual showcases:
+### 3. Program Section
+**Schedule (program-schedule.html)**
+- Day 1 (September 29, 2026) detailed schedule
+- Day 2 (September 30, 2026) detailed schedule
+- Session timings and topics
 
-**Program 1: AI & ML BLACKBELT PLUS**
-- Comprehensive AI and Machine Learning training
-- Real-world project experience
-- Portfolio development focus
+**Sessions & Speakers (program-sessions.html)**
+- Keynote speaker profiles with placeholders
+- Workshop descriptions
+- Panel discussion details
+- Session abstracts
 
-**Program 2: GenAI PINNACLE PLUS**
-- Generative AI specialization
-- ChatGPT and AI tools mastery
-- Creative AI applications
+**Design Safari (program-safari.html)**
+- Experiential learning session
+- Date: September 30, 10:00 AM - 12:00 PM
+- Optional participation details
+- What to expect
 
-**Program 3: AGENTIC AI PIONEER**
-- Autonomous AI systems
-- Decision-making AI agents
-- Cutting-edge AI research
+### 4. Travel & Stay (travel-stay.html)
+- How to reach (by air, train, road)
+- Accommodation options (premium, mid-range, budget)
+- Local transportation information
+- Nearby attractions
 
-### 6. Combined Information Section
-- Certification from Western State University
-- Mentor support details
-- Call to action messaging
+### 5. Sponsors (sponsors.html)
+- Platinum sponsors showcase
+- Gold sponsors showcase
+- Partnership opportunities
+- Sponsor benefits
 
-### 7. Footer Section
-- Social media links (Instagram, YouTube, LinkedIn)
-- Copyright information
+### 6. Contact (contact.html)
+- Conference email: conference@gdta.org
+- Phone: +91 12345 67890
+- Address: SNS Institutions, Coimbatore
+- Contact form for inquiries
+- Social media links
 
-### 8. Enrollment Modal
-- Contact form with fields:
-  - First Name
-  - Last Name
+### 7. Register (register.html)
+- Registration form with fields:
+  - Full Name
   - Email Address
   - Phone Number
-  - Message
-  - Terms of Service agreement checkbox
-  - Submit button
+  - Organization
+  - Designation
+  - Design Safari Interest (Yes/No/Maybe)
+  - Dietary Requirements
+  - Terms & Conditions agreement
+- Conference details sidebar (dates, venue, fees)
 
-## Color Scheme
+## Navigation Structure
 
-- Primary Background: #C7C6C3 (Light Gray)
-- Accent Color: #ffcc00 (Gold/Yellow for CTA buttons)
-- Text Color: #000000 (Black)
-- Shadow Effects: rgba(0, 0, 0, 0.15-0.3)
+**Main Menu:**
+- Home (index.html)
+- About (dropdown)
+  - GDTA (about-gdta.html)
+  - GDTA 2026 (about-gdta-2026.html)
+  - SNS Institutions (about-sns.html)
+- Program (dropdown)
+  - Schedule (program-schedule.html)
+  - Sessions (program-sessions.html)
+  - Design Safari (program-safari.html)
+- Travel & Stay (travel-stay.html)
+- Sponsors (sponsors.html)
+- Contact (contact.html)
+- Register (register.html) - CTA button styled
+
+## Theme & Design
+
+**GDTA Color Palette:**
+- Primary Background: #1F1F1F (Dark charcoal)
+- Card Background: #2B2B2B (Lighter dark gray)
+- Accent Color: #F2B705 (Gold)
+- Text Primary: #FFFFFF (White)
+- Text Secondary: #D1D1D1 (Light gray)
+- Text Muted: #9CA3AF (Muted gray)
+**Animation System:**
+- WOW.js for scroll-triggered animations
+- Animate.css for animation effects
+- Staggered delays for sequential element animations
+- FadeIn variants (fadeInLeft, fadeInRight, fadeInUp, fadeInDown)
+
+**Typography:**
+- Montserrat (headings and bold text)
+- Open Sans (body text)
+- Responsive font sizes across devices
 
 ## Design Features
 
 ### Visual Effects
-- Shadow effects on content sections for depth
-- Smooth scroll animations using WOW.js
-- Hover effects on program containers
-- Directional shadows on left/right program sections
+- Dark theme with high contrast
+- Gold accent colors for CTAs and highlights
+- Card shadows for depth perception
+- Smooth transitions on hover states
+- WOW.js scroll animations throughout
 
 ### Responsive Design
-- Mobile-first approach
-- Bootstrap grid system
-- Adaptive layouts for different screen sizes
+- Mobile-first Bootstrap 5 grid system
+- Adaptive layouts for all screen sizes
+- Collapsible navigation menu on mobile
 - Touch-friendly interface elements
+- Optimized for desktop, tablet, and mobile
 
-### Performance Optimizations
-- Removed unused template libraries
-- Optimized image loading
-- Minified CSS and JavaScript where applicable
-- Efficient 3D model loading
+### Navigation Features
+- Fixed top navbar with transparency
+- Dropdown menus for About and Program sections
+- Active page highlighting
+- Mobile-responsive hamburger menu
+- Consistent navigation across all 11 pages
 
 ## Setup and Installation
 
@@ -176,8 +243,8 @@ Three flagship programs with individual showcases:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/SRAMBOT08/landing_website.git
-cd landing_website
+git clone https://github.com/yourusername/GDTA2026.git
+cd GDTA2026
 ```
 
 2. Open the project:
@@ -187,6 +254,12 @@ cd landing_website
 3. For local development server (Python):
 ```bash
 python -m http.server 8000
+```
+Then navigate to `http://localhost:8000`
+
+4. For local development server (Node.js):
+```bash
+npx http-server -p 8000
 ```
 Then navigate to `http://localhost:8000`
 
@@ -211,11 +284,29 @@ Then navigate to `http://localhost:8000`
 
 ### Making Changes
 
-1. Edit content in `index.html`
-2. Customize colors in `css/custom-overrides.css`
-3. Test responsiveness across devices
-4. Commit changes with descriptive messages
-5. Push to repository
+**Content Updates:**
+1. Edit page content in respective HTML files
+2. Update conference details in registration form
+3. Modify schedule in program-schedule.html
+4. Add speaker information in program-sessions.html
+
+**Style Customizations:**
+1. Theme colors in `css/custom-overrides.css`
+2. Component styling overrides
+3. Custom animations and effects
+4. Typography adjustments
+
+**Navigation Updates:**
+1. Update navbar links in all pages consistently
+2. Ensure active states reflect current page
+3. Test dropdown menus on all devices
+
+**Testing:**
+1. Test all pages across devices
+2. Verify form submissions
+3. Check animation triggers
+4. Validate responsive breakpoints
+5. Test navigation on mobile
 
 ## Browser Compatibility
 
@@ -225,88 +316,140 @@ Then navigate to `http://localhost:8000`
 - Microsoft Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## Content Sources
+## Conference Information
 
-### Text Content
-- Extracted from `AV - (1).docx` document
-- Partnership details: SNS Institutions + Analytics Vidhya
-- Program descriptions aligned with institution offerings
+### Event Details
+- **Name:** GDTA 2026 Conference
+- **Theme:** Chaos & Clarity
+- **Dates:** September 29-30, 2026
+- **Venue:** SNS Institutions, Coimbatore, Tamil Nadu, India
+- **Registration Fee:** ₹2,500 per participant
 
-### Images
-- Logo: SNS Institutions official branding
-- Program images: AI/ML themed graphics
-- Placeholder sections for manual image insertion
-
-### 3D Model
-- Spline-designed robot character
-- Hosted on Spline CDN
-- Interactive and auto-loading
+### Key Features
+- 2-day conference with expert keynotes
+- Interactive workshops and panel discussions
+- Design Safari experiential learning session
+- Networking opportunities with design thinking practitioners
+- Certificate of participation
 
 ## Social Media Integration
 
-- Instagram: https://www.instagram.com/snsinstitutions
-- YouTube: https://youtube.com/@snsinstitutions
-- LinkedIn: https://www.linkedin.com/school/snsinstitutions/
+- Instagram: https://www.instagram.com/gdtaconference
+- YouTube: https://youtube.com/@gdtaofficial
+- LinkedIn: https://www.linkedin.com/company/gdta/
 
 ## Deployment
 
-The website is deployed via GitHub Pages and can be accessed through the repository settings.
+The website can be deployed via GitHub Pages, Netlify, Vercel, or any static hosting service.
 
-### Deployment Steps
+### Deployment Steps (GitHub Pages)
 1. Commit all changes to main branch
 2. Push to GitHub repository
 3. Configure GitHub Pages in repository settings
-4. Access via provided GitHub Pages URL
+4. Select main branch and root directory
+5. Access via provided GitHub Pages URL
+
+### Deployment Steps (Netlify/Vercel)
+1. Connect your repository
+2. Set build command: none (static site)
+3. Set publish directory: / (root)
+4. Deploy automatically on push
 
 ## Version History
 
-### Current Version
+### Version 2.0 (Current - GDTA 2026)
+- Multi-page website structure (11 pages)
+- GDTA Conference theme "Chaos & Clarity"
+- Dark theme with gold accents
+- Dropdown navigation menus
+- Registration form with design safari option
+- Comprehensive conference information
+- Placeholder images for all sections
+
+### Version 1.0 (Original - SNS AI Education)
 - Single-page design with 3D hero section
-- Three program showcases
+- Three AI/ML program showcases
 - Enrollment modal form
-- Social media integration
-- Custom color scheme implementation
-- Shadow effects and animations
+- Light theme with teal accents
 
 ## Credits
 
 ### Template Base
-- Original Template: ThemeWagon Poseify
-- Modified and customized for SNS Institutions
+- Original Template: Bootstrap-based responsive template
+- Heavily customized for GDTA Conference
 
-### Content Partners
-- SNS Institutions
-- Analytics Vidhya
-- Western State University
+### Organizations
+- Global Design Thinking Alliance (GDTA)
+- SNS Institutions (Host Venue)
 
-### Design Elements
-- 3D Model: Spline Design Platform
-- Icons: Font Awesome, Bootstrap Icons
-- Fonts: Google Fonts
+### Libraries & Frameworks
+- Bootstrap 5.0.0
+- WOW.js, Animate.css
+- jQuery 3.4.1
+- Font Awesome 7.0.0
+- Google Fonts
 
 ## License
 
-This project is licensed under the terms specified in LICENSE.txt.
+This project is for the GDTA 2026 Conference. All rights reserved.
 
 ## Contact Information
 
-For inquiries about the programs or website:
-- Website: SNS Institutions Landing Page
-- Social Media: Instagram, YouTube, LinkedIn (links in footer)
+**Conference Inquiries:**
+- Email: conference@gdta.org
+- Phone: +91 12345 67890
+- Address: SNS Institutions, Coimbatore, Tamil Nadu, India
+
+**Social Media:**
+- Instagram: @gdtaconference
+- YouTube: @gdtaofficial
+- LinkedIn: /company/gdta
 
 ## Maintenance and Updates
 
 ### Regular Updates
-- Content updates as programs evolve
-- Image replacements in placeholder sections
-- Form integration with backend systems
-- Performance monitoring and optimization
+- Update speaker information as confirmed
+- Replace placeholder images with actual photos
+- Update schedule timings as finalized
+- Monitor and respond to contact form submissions
+- Update sponsor logos as partnerships confirmed
 
 ### Future Enhancements
-- Backend integration for form submissions
-- Analytics tracking
-- Additional program sections
-- Video content integration
+- Backend integration for registration form processing
+- Payment gateway integration for registration fees
+- Email confirmation system for registrations
+- Analytics tracking for visitor insights
+- Live schedule updates during conference
+- Photo gallery post-conference
+- Testimonials and feedback section
+
+## Technical Notes
+
+### Image Placeholders
+Currently using placeholder images. Replace with actual images:
+- `placeholder-hero.jpg` - Conference venue or keynote images
+- `placeholder-section.jpg` - General section backgrounds
+- `placeholder-card.jpg` - Speaker photos, venue images
+- `placeholder-logo.png` - GDTA logo, sponsor logos
+
+### Form Submission
+Registration and contact forms currently have no backend. Integrate with:
+- Backend API endpoint
+- Google Forms
+- Email service (SendGrid, Mailchimp)
+- Form submission service (Formspree, Netlify Forms)
+
+### Performance Optimization
+- Compress and optimize actual images before upload
+- Enable browser caching
+- Minify CSS and JavaScript for production
+- Use CDN for library files
+- Implement lazy loading for images
+
+---
+
+**Built for GDTA 2026 Conference - "Chaos & Clarity"**
+
 - Testimonials section
 - Alumni success stories
 
