@@ -40,6 +40,26 @@
             border-color: #000000 !important;
             color: #ffffff !important;
         }
+        
+        /* Desktop and Mobile 3D Model Display */
+        .desktop-model {
+            display: block;
+        }
+        
+        .mobile-model {
+            display: none;
+        }
+        
+        /* Show mobile model on screens smaller than 768px */
+        @media (max-width: 767px) {
+            .desktop-model {
+                display: none;
+            }
+            
+            .mobile-model {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -66,8 +86,14 @@
 
     <!-- 3D Model Container - Full Viewport -->
     <div id="home" style="width: 100vw; height: 100vh; position: relative; background: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); padding-top: 86px; overflow: hidden;">
-        <div class="iframe-wrapper" style="position: relative; width: 100%; height: 100%;">
+        <!-- Desktop 3D Model -->
+        <div class="iframe-wrapper desktop-model" style="position: relative; width: 100%; height: 100%;">
             <iframe src='https://my.spline.design/nexbotrobotcharacterconcept-11WGoL8vp1RhiA97mOv2Dezr/' frameborder='0' width='100%' height='100%' allow="autoplay"></iframe>
+        </div>
+        
+        <!-- Mobile 3D Model -->
+        <div class="iframe-wrapper mobile-model" style="position: relative; width: 100%; height: 100%;">
+            <iframe src='https://my.spline.design/nexbotrobotcharacterconcept-mqC1Z8BvWKoDmZhHc1WcLoS5/' frameborder='0' width='100%' height='100%' allow="autoplay"></iframe>
         </div>
         
         <!-- Animated Halftone Dots Only Around Robot Area -->
