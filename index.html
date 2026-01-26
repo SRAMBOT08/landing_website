@@ -73,18 +73,8 @@
         <!-- Animated Halftone Dots Only Around Robot Area -->
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 1; mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%); -webkit-mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%); animation: dotFloat 8s ease-in-out infinite;"></div>
         
-        <!-- Left Bottom Text -->
-        <div class="wow text-left-mobile" data-wow-delay="4s" style="position: absolute; z-index: 1000; animation: slideInFromLeft 1.5s ease-out 4s both;">
-            <h3 style="color: #000000; font-weight: 800; margin: 0; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(255, 204, 0, 0.3);">Exclusive for +2 students<br><span>(2026 pass out)</span></h3>
-        </div>
-        
-        <!-- Right Bottom Text -->
-        <div class="wow text-right-mobile" data-wow-delay="4s" style="position: absolute; z-index: 1000; animation: slideInFromRight 1.5s ease-out 4s both;">
-            <h3 style="color: #000000; font-weight: 800; margin: 0; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(255, 204, 0, 0.3);">100 days on campus bootcamp<br><span>(April till June)</span></h3>
-        </div>
-        
         <!-- Watermark Patch -->
-        <div class="watermark-patch" style="position: absolute; bottom: 0; right: 0; width: 200px; height: 100px; background-color: #ffffff; z-index: 999; pointer-events: none;"></div>
+        <div class="watermark-patch" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background-color: #ffffff; z-index: 999; pointer-events: none;"></div>
     </div>
     <!-- 3D Model Container End -->
 
@@ -196,33 +186,43 @@
         /* Mobile Navbar Styles */
         @media (max-width: 768px) {
             .navbar-container {
-                display: grid;
-                grid-template-columns: auto 1fr auto;
+                display: flex;
                 gap: 10px;
                 padding: 15px 10px;
                 align-items: center;
-                overflow-x: auto;
-                overflow-y: hidden;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
+                position: relative;
             }
             
-            .navbar-container::-webkit-scrollbar {
-                display: none;
+            .navbar-container > a:first-child {
+                flex-shrink: 0;
+            }
+            
+            .navbar-container > a:last-child {
+                flex-shrink: 0;
             }
             
             .nav-links {
                 display: flex;
                 gap: 8px;
                 flex-wrap: nowrap;
-                justify-content: center;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                flex: 1;
                 align-items: center;
+                padding: 0 5px;
+            }
+            
+            .nav-links::-webkit-scrollbar {
+                display: none;
             }
             
             .nav-pill {
                 font-size: 11px;
                 padding: 6px 12px;
                 white-space: nowrap;
+                flex-shrink: 0;
             }
             
             .logo-img {
@@ -239,13 +239,13 @@
         /* Small Mobile */
         @media (max-width: 480px) {
             .navbar-container {
-                grid-template-columns: auto 1fr auto;
                 padding: 12px 8px;
                 gap: 8px;
             }
             
             .nav-links {
                 gap: 6px;
+                padding: 0 3px;
             }
             
             .nav-pill {
@@ -302,46 +302,12 @@
             }
             
             .flagship-image-container.rounded-left {
-                border-radius: 40% 0% 0% 40%;
+                border-radius: 50%;
             }
             
             .flagship-image-container.rounded-right {
-                border-radius: 0% 40% 40% 0%;
+                border-radius: 50%;
             }
-        }
-        
-        /* Desktop Default Positioning */
-        .text-left-mobile {
-            bottom: 150px;
-            left: 50px;
-            max-width: 400px;
-        }
-        
-        .text-left-mobile h3 {
-            font-size: 1.8rem;
-            line-height: 1.3;
-            letter-spacing: 1.5px;
-        }
-        
-        .text-left-mobile h3 span {
-            font-size: 1.5rem;
-        }
-        
-        .text-right-mobile {
-            bottom: 150px;
-            right: 50px;
-            max-width: 400px;
-            text-align: right;
-        }
-        
-        .text-right-mobile h3 {
-            font-size: 1.8rem;
-            line-height: 1.3;
-            letter-spacing: 1.5px;
-        }
-        
-        .text-right-mobile h3 span {
-            font-size: 1.5rem;
         }
         
         /* Mobile Responsive - Robot Section */
@@ -354,71 +320,6 @@
             .iframe-wrapper {
                 box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.3), 
                             inset 0 0 30px rgba(255, 255, 255, 0.5);
-            }
-            
-            .text-left-mobile {
-                top: 180px !important;
-                bottom: auto !important;
-                left: 15px !important;
-                max-width: 200px !important;
-                z-index: 1000 !important;
-            }
-            
-            .text-left-mobile h3 {
-                font-size: 1.1rem !important;
-                letter-spacing: 0.8px !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-left-mobile h3 span {
-                font-size: 0.9rem !important;
-            }
-            
-            .text-right-mobile {
-                bottom: 250px !important;
-                top: auto !important;
-                right: 15px !important;
-                max-width: 200px !important;
-            }
-            
-            .text-right-mobile h3 {
-                font-size: 1.1rem !important;
-                letter-spacing: 0.8px !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-right-mobile h3 span {
-                font-size: 0.9rem !important;
-            }
-            
-            #home .wow h3 {
-                font-size: 1.1rem !important;
-                letter-spacing: 0.8px !important;
-                word-wrap: break-word !important;
-                white-space: normal !important;
-                line-height: 1.3 !important;
-            }
-            
-            #home .wow h3 span {
-                font-size: 0.9rem !important;
-                display: block !important;
-                margin-top: 3px !important;
-            }
-            
-            #home .wow:first-of-type {
-                bottom: auto !important;
-                top: 100px !important;
-                left: 15px !important;
-                max-width: 200px !important;
-                text-align: left !important;
-            }
-            
-            #home .wow:nth-of-type(2) {
-                bottom: 160px !important;
-                top: auto !important;
-                right: 15px !important;
-                left: auto !important;
-                max-width: 200px !important;
             }
             
             .watermark-patch {
@@ -437,71 +338,6 @@
                             inset 0 0 40px rgba(255, 255, 255, 0.6);
             }
             
-            .text-lef110px !important;
-                bottom: auto !important;
-                left: 10px !important;
-                max-width: 180px !important;
-                z-index: 1000rtant;
-                max-width: 180px !important;
-            }
-            
-            .text-left-mobile h3 {
-                font-size: 0.85rem !important;
-                letter-spacing: 0.5px !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-left-mobile h3 span {
-                font-size: 0.7rem !important;
-            }
-            
-            .text-right-mobile {
-                bottom: 260px !important;
-                top: auto !important;
-                right: 10px !important;
-                max-width: 180px !important;
-            }
-            
-            .text-right-mobile h3 {
-                font-size: 0.85rem !important;
-                letter-spacing: 0.5px !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-right-mobile h3 span {
-                font-size: 0.7rem !important;
-            }
-            
-            #home .wow h3 {
-                font-size: 0.85rem !important;
-                letter-spacing: 0.5px !important;
-                word-wrap: break-word !important;
-                white-space: normal !important;
-                line-height: 1.3 !important;
-            }
-            
-            #home .wow h3 span {
-                font-size: 0.7rem !important;
-                display: block !important;
-                margin-top: 2px !important;
-            }
-            
-            #home .wow:first-of-type {
-                top: 90px !important;
-                bottom: auto !important;
-                left: 10px !important;
-                max-width: 180px !important;
-                text-align: left !important;
-            }
-            
-            #home .wow:nth-of-type(2) {
-                top: auto !important;
-                bottom: 170px !important;
-                right: 10px !important;
-                left: auto !important;
-                max-width: 180px !important;
-            }
-            
             .watermark-patch {
                 width: 100% !important;
                 height: 150px !important;
@@ -511,11 +347,11 @@
         /* Desktop */
         @media (min-width: 769px) {
             .flagship-image-container.rounded-left {
-                border-radius: 60% 0% 0% 60%;
+                border-radius: 50%;
             }
             
             .flagship-image-container.rounded-right {
-                border-radius: 0% 60% 60% 0%;
+                border-radius: 50%;
             }
         }
         
@@ -533,8 +369,33 @@
         }
     </style>
 
+    <!-- Yellow Text Boxes Section -->
+    <div class="container-fluid" style="background-color: #ffffff; padding: 0; margin-top: -80px; position: relative; z-index: 1000;">
+        <div class="container" style="padding: 0 20px;">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s" style="background-color: #ffcc00; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);">
+                        <h3 style="color: #000000; font-weight: 800; margin: 0; text-transform: uppercase; font-size: 1.5rem; line-height: 1.4;">
+                            Exclusive for +2 students<br>
+                            <span style="font-size: 1.2rem; font-weight: 600;">(2026 pass out)</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="wow fadeInUp" data-wow-delay="0.2s" style="background-color: #ffcc00; border-radius: 15px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);">
+                        <h3 style="color: #000000; font-weight: 800; margin: 0; text-transform: uppercase; font-size: 1.5rem; line-height: 1.4;">
+                            100 days on campus bootcamp<br>
+                            <span style="font-size: 1.2rem; font-weight: 600;">(April till June)</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Yellow Text Boxes Section End -->
+
     <!-- Opening Section Start -->
-    <div id="about" class="container-fluid" style="background-color: #ffffff; margin-top: -50px;">
+    <div id="about" class="container-fluid" style="background-color: #ffffff; margin-top: 0;">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-5">
