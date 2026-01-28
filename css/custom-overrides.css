@@ -264,11 +264,11 @@ html {
     .nav-pill {
         width: 100%;
         text-align: center;
-        padding: 15px 20px;
+        padding: 25px 30px;
         background-color: transparent !important;
         color: #000000 !important;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 60px;
+        font-weight: 700;
         border-radius: 0;
         box-shadow: none;
     }
