@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta content="SNS Institutions partners with Analytics Vidhya to offer industry-powered AI & ML education programs" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="img/SNS Group Logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,17 +69,25 @@
     <div class="container-fluid p-0" style="background-color: #ffcc00; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
         <div class="navbar-container">
             <a href="index.html">
-                <img src="img/uplogo.jpeg" alt="SNS Institutions - Analytics Vidhya Partnership" class="logo-img">
+                <img src="img/SNS Group Logo.png" alt="SNS Institutions - Analytics Vidhya Partnership" class="logo-img">
             </a>
             
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-pill">Home</a>
                 <a href="#about" class="nav-pill">About us</a>
                 <a href="#programs" class="nav-pill">Agentic AI Programs</a>
+                <a href="#curriculum" class="nav-pill">Curriculum</a>
                 <a href="#testimonial" class="nav-pill">Testimonial</a>
             </div>
             
             <a class="btn btn-outline-primary border-2 enroll-btn" href="#" data-bs-toggle="modal" data-bs-target="#enrollModal"> Enquiry Now</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
     <!-- Header End -->
@@ -376,14 +384,14 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .responsive-image-container {
-                height: 250px;
+                height: 400px;
                 margin: 0 auto;
-                max-width: 350px;
+                max-width: 500px;
             }
             
             .flagship-image-container {
-                width: 280px;
-                height: 280px;
+                width: 400px;
+                height: 400px;
             }
             
             .flagship-image-container.rounded-left {
@@ -666,7 +674,7 @@
     <!-- Roadmap Section End -->
 
     <!-- Course Curriculum Section Start -->
-    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);">
+    <div id="curriculum" class="container-fluid py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);">
         <div class="container">
             <div class="text-center mb-5">
                 <div style="background: linear-gradient(45deg, #ffcc00, #ffd700); color: #000000; padding: 12px 30px; border-radius: 30px; display: inline-block; font-weight: 700; font-size: 1rem; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(255,204,0,0.3);">
@@ -1036,7 +1044,7 @@
                 <div style="text-align: right; color: #bdbdbd; font-size: 1rem; margin-top: 8px;">- SNS Vision</div>
             </div>
             <div class="text-center mt-4">
-                <a href="#enroll" class="btn btn-warning" style="background: #ffcc00; color: #181818; font-weight: 700; font-size: 1.15rem; padding: 12px 38px; border-radius: 30px; box-shadow: 0 4px 18px rgba(255,204,0,0.15); border: none;">Enroll Now</a>
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#enrollModal" style="background: #000000 !important; color: #ffffff !important; font-weight: 700; font-size: 1.15rem; padding: 12px 38px; border-radius: 30px; box-shadow: 0 4px 18px rgba(0,0,0,0.15); border: none;">Enquiry Now</a>
             </div>
         </div>
     </div>
@@ -1204,6 +1212,40 @@
         </div>
     </div>
     <!-- Testimonials Section End -->
+
+    <!-- Partners Section Start -->
+    <div class="container-fluid py-5" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 2.8rem; font-weight: 800; color: #000000; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">Our <span style="color: #ffcc00;">Partners</span></h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- SNS Institutions Card -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="wow fadeInUp" data-wow-delay="0.3s" style="background-color: #f5f5f5; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); height: 100%;">
+                        <div style="background-color: #ffffff; border-radius: 15px; padding: 30px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; min-height: 150px;">
+                            <img src="img/SNS Institutions Logo.png" alt="SNS Institutions" style="max-width: 200px; height: auto;">
+                        </div>
+                        <h3 style="color: #000000; font-weight: 700; margin-bottom: 20px; font-size: 1.8rem;">SNS Institutions</h3>
+                        <p style="color: #666666; font-size: 1rem; line-height: 1.6; margin: 0;">Premier educational institution in Coimbatore, dedicated to redesigning common minds through design thinking and innovation.</p>
+                    </div>
+                </div>
+                
+                <!-- Analytics Vidhya Card -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="wow fadeInUp" data-wow-delay="0.5s" style="background-color: #f5f5f5; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); height: 100%;">
+                        <div style="background-color: #ffffff; border-radius: 15px; padding: 30px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; min-height: 150px;">
+                            <img src="img/av.png" alt="Analytics Vidhya" style="max-width: 250px; height: auto;">
+                        </div>
+                        <h3 style="color: #000000; font-weight: 700; margin-bottom: 20px; font-size: 1.8rem;">Analytics Vidhya</h3>
+                        <p style="color: #666666; font-size: 1rem; line-height: 1.6; margin: 0;">India's largest analytics and data science community, providing world-class AI education and certification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Partners Section End -->
 
     <!-- Enrollment Modal -->
     <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">

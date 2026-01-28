@@ -164,3 +164,125 @@ html {
 .service-img::before {
     display: none !important;
 }
+
+/* Navbar Container Layout */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo-img {
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.enroll-btn {
+    white-space: nowrap;
+}
+
+/* Hamburger Menu - Hidden by default */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 15px 20px;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    /* Show hamburger menu on mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Hide nav links by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+        justify-content: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 999;
+    }
+    
+    /* Show nav links when active */
+    .nav-links.active {
+        max-height: 100vh;
+        opacity: 1;
+    }
+    
+    .nav-pill {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+        background-color: transparent !important;
+        color: #000000 !important;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .nav-pill:hover {
+        background-color: transparent !important;
+        color: #000000 !important;
+        transform: none;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+    
+    .enroll-btn {
+        font-size: 12px;
+        padding: 8px 15px !important;
+    }
+}
