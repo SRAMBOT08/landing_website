@@ -33,6 +33,12 @@
     
     <!-- Custom Color Overrides -->
     <link href="css/custom-overrides.css" rel="stylesheet">
+    <!-- Program Lock CSS -->
+    <link href="css/program-lock.css" rel="stylesheet">
+    <!-- Robo Section Hover Effect -->
+    <link href="css/robo-hover.css" rel="stylesheet">
+    <!-- Section Divider CSS -->
+    <link href="css/section-divider.css" rel="stylesheet">
     
     <style>
         .btn-outline-primary:hover {
@@ -105,13 +111,13 @@
         </div>
         
         <!-- Animated Halftone Dots Only Around Robot Area -->
+        <script src="js/program-unlock.js"></script>
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: radial-gradient(circle, #000000 2px, transparent 2px); background-size: 20px 20px; pointer-events: none; z-index: 1; mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%); -webkit-mask-image: radial-gradient(ellipse 500px 400px at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.3) 80%, transparent 95%); animation: dotFloat 8s ease-in-out infinite;"></div>
         
         <!-- Desktop Questions - Left Side -->
         <div class="d-none d-md-block" style="position: absolute; left: 50px; top: 65%; transform: translateY(-50%); z-index: 10; opacity: 0; animation: slideInFromLeft 1s ease-out 3s forwards;">
-            <div class="mb-4 wow fadeInUp" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.2); max-width: 380px; border: 2px solid #ffcc00; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: linear-gradient(45deg, #ffcc00, #ffd700); border-radius: 50%; opacity: 0.1;"></div>
-                <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="mb-4 wow fadeInUp robo-point" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.2); max-width: 380px; border: 2px solid #ffcc00; position: relative; overflow: hidden;">
+                <div style="display: flex; align-items: center; gap: 15px; position: relative;">
                     <div style="background: linear-gradient(45deg, #ffcc00, #ffd700); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255,204,0,0.4); flex-shrink: 0;">
                         <i class="fas fa-user-graduate" style="color: #000000; font-size: 20px;"></i>
                     </div>
@@ -121,9 +127,8 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-4 wow fadeInUp" data-wow-delay="1.0s" style="background: linear-gradient(135deg, #ffcc00 0%, #ffd700 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(255,204,0,0.3); max-width: 380px; border: 2px solid #ffffff; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -15px; left: -15px; width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
-                <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="mb-4 wow fadeInUp robo-point" data-wow-delay="1.0s" style="background: linear-gradient(135deg, #ffcc00 0%, #ffd700 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(255,204,0,0.3); max-width: 380px; border: 2px solid #ffffff; position: relative; overflow: hidden;">
+                <div style="display: flex; align-items: center; gap: 15px; position: relative;">
                     <div style="background: #000000; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255,204,0,0.4); flex-shrink: 0;">
                         <i class="fas fa-clock" style="color: #ffcc00; font-size: 20px;"></i>
                     </div>
@@ -137,9 +142,8 @@
         
         <!-- Desktop Questions - Right Side -->
         <div class="d-none d-md-block" style="position: absolute; right: 50px; top: 65%; transform: translateY(-50%); z-index: 10; opacity: 0; animation: slideInFromRight 1s ease-out 3.5s forwards;">
-            <div class="mb-4 wow fadeInUp" data-wow-delay="1.5s" style="background: linear-gradient(135deg, #ffcc00 0%, #ffd700 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(255,204,0,0.3); max-width: 380px; border: 2px solid #ffffff; position: relative; overflow: hidden;">
-                <div style="position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.15); border-radius: 50%;"></div>
-                <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="mb-4 wow fadeInUp robo-point" data-wow-delay="1.5s" style="background: linear-gradient(135deg, #ffcc00 0%, #ffd700 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(255,204,0,0.3); max-width: 380px; border: 2px solid #ffffff; position: relative; overflow: hidden;">
+                <div style="display: flex; align-items: center; gap: 15px; position: relative;">
                     <div style="background: #000000; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255,204,0,0.4); flex-shrink: 0;">
                         <i class="fas fa-brain" style="color: #ffcc00; font-size: 20px;"></i>
                     </div>
@@ -149,9 +153,8 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-4 wow fadeInUp" data-wow-delay="2.0s" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.2); max-width: 380px; border: 2px solid #ffcc00; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -5px; left: -5px; width: 40px; height: 40px; background: linear-gradient(45deg, #ffcc00, #ffd700); border-radius: 50%; opacity: 0.2;"></div>
-                <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="mb-4 wow fadeInUp robo-point" data-wow-delay="2.0s" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 25px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.2); max-width: 380px; border: 2px solid #ffcc00; position: relative; overflow: hidden;">
+                <div style="display: flex; align-items: center; gap: 15px; position: relative;">
                     <div style="background: linear-gradient(45deg, #ffcc00, #ffd700); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255,204,0,0.4); flex-shrink: 0;">
                         <i class="fas fa-rocket" style="color: #000000; font-size: 20px;"></i>
                     </div>
@@ -661,7 +664,7 @@
     <!-- Why Join Section End -->
 
     <!-- Roadmap Section Start -->
-    <div class="container-fluid py-5" style="background-color: #ffcc00;">
+    <div class="container-fluid py-5 deep-section-shadow" style="background-color: #ffcc00;">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 2.5rem; font-weight: 800; color: #000000; text-transform: uppercase; letter-spacing: 2px;">Personalized Roadmap</h2>
@@ -674,7 +677,7 @@
     <!-- Roadmap Section End -->
 
     <!-- Course Curriculum Section Start -->
-    <div id="curriculum" class="container-fluid py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);">
+    <div id="curriculum" class="container-fluid py-5 section-divider" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);">
         <div class="container">
             <div class="text-center mb-5">
                 <div style="background: linear-gradient(45deg, #ffcc00, #ffd700); color: #000000; padding: 12px 30px; border-radius: 30px; display: inline-block; font-weight: 700; font-size: 1rem; margin-bottom: 20px; box-shadow: 0 6px 20px rgba(255,204,0,0.3);">
@@ -826,7 +829,7 @@
     <!-- Course Curriculum Section End -->
 
     <!-- GenZ Section Start -->
-    <div class="container-fluid py-5" style="background-color: #ffffff;">
+    <div class="container-fluid py-5 subtle-section-shadow" style="background-color: #ffffff;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
@@ -859,7 +862,7 @@
 
 
     <!-- Programs Start -->
-    <div id="programs" class="container-fluid py-5" style="background-color: #ffcc00; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
+    <div id="programs" class="container-fluid py-5 deep-section-shadow" style="background-color: #ffcc00;">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -869,59 +872,8 @@
                     </div>
                 </div>
             </div>
-            <div class="service-item service-item-left mb-5">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-4 wow fadeInRight" data-wow-delay="0.2s">
-                            <div class="flagship-image-container rounded-left">
-                                <img src="img/istockphoto-1628291798-612x612.jpg" alt="AI & ML Training" class="responsive-image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
-                            <h3>1. AI & ML BLACKBELT PLUS — Become an AI Expert</h3>
-                            <p class="mb-3">"Train like a Professional. Think like a Leader."</p>
-                            <p class="mb-3">This is for students who want to master Artificial Intelligence and Machine Learning at a deep level.</p>
-                            <p class="mb-3">In this program, you will:</p>
-                            <ul class="mb-3">
-                                <li>Learn core AI & Machine Learning concepts</li>
-                                <li>Work on real-world AI projects</li>
-                                <li>Build smart models that can predict, analyze, and automate</li>
-                                <li>Create a powerful portfolio that impresses recruiters</li>
-                            </ul>
-                            <p class="mb-4">If you dream of becoming an AI Engineer, Data Scientist, or ML Engineer, this is your ultimate training ground.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item service-item-right mb-5">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-4 wow fadeInLeft" data-wow-delay="0.2s">
-                            <div class="flagship-image-container rounded-right">
-                                <img src="img/blackbelt.jpg" alt="GenAI Learning" class="responsive-image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 py-md-5 wow fadeInLeft" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
-                            <h3>2. GenAI PINNACLE PLUS — Build the Future with Generative AI</h3>
-                            <p class="mb-3">"From User to Creator of AI."</p>
-                            <p class="mb-3">This program takes you into the exciting world of Generative AI — the technology behind ChatGPT, image generators, and smart automation tools.</p>
-                            <p class="mb-3">You will learn how to:</p>
-                            <ul class="mb-3">
-                                <li>Use AI creatively and intelligently</li>
-                                <li>Build AI-powered applications</li>
-                                <li>Generate text, images, and smart solutions using AI</li>
-                                <li>Automate real-world tasks using GenAI tools</li>
-                            </ul>
-                            <p class="mb-4">Perfect for students who want to be innovators, creators, and next-gen tech leaders.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item service-item-left">
+            <!-- 1. AGENTIC AI PIONEER — Design Intelligent AI Agents -->
+            <div class="service-item service-item-left mb-5" id="program-agentic">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
                         <div class="service-img p-4 wow fadeInRight" data-wow-delay="0.2s">
@@ -932,7 +884,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-5 py-5 py-md-5 wow fadeInRight" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important;">
-                            <h3>3. AGENTIC AI PIONEER — Design Intelligent AI Agents</h3>
+                            <h3>1. AGENTIC AI PIONEER — Design Intelligent AI Agents</h3>
                             <p class="mb-3">"Teach AI to Think and Act on Its Own."</p>
                             <p class="mb-3">This is a futuristic program where you learn to build Agentic AI — AI systems that can plan, make decisions, and take actions independently.</p>
                             <p class="mb-3">Through this program, you will:</p>
@@ -947,9 +899,68 @@
                     </div>
                 </div>
             </div>
+            <!-- 2. GenAI PINNACLE PLUS — Build the Future with Generative AI (locked by default) -->
+            <div class="service-item service-item-right mb-5 program-locked" id="program-genai">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-4 wow fadeInLeft" data-wow-delay="0.2s">
+                            <div class="flagship-image-container rounded-right">
+                                <img src="img/blackbelt.jpg" alt="GenAI Learning" class="responsive-image">
+                                <div class="program-lock-overlay"><i class="fas fa-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 py-md-5 wow fadeInLeft" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important; position: relative;">
+                            <h3>2. GenAI PINNACLE PLUS — Build the Future with Generative AI</h3>
+                            <p class="mb-3">"From User to Creator of AI."</p>
+                            <p class="mb-3">This program takes you into the exciting world of Generative AI — the technology behind ChatGPT, image generators, and smart automation tools.</p>
+                            <p class="mb-3">You will learn how to:</p>
+                            <ul class="mb-3">
+                                <li>Use AI creatively and intelligently</li>
+                                <li>Build AI-powered applications</li>
+                                <li>Generate text, images, and smart solutions using AI</li>
+                                <li>Automate real-world tasks using GenAI tools</li>
+                            </ul>
+                            <p class="mb-4">Perfect for students who want to be innovators, creators, and next-gen tech leaders.</p>
+                            <div class="program-lock-msg">Unlock by completing Agentic AI Pioneer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3. AI & ML BLACKBELT PLUS — Become an AI Expert (locked by default) -->
+            <div class="service-item service-item-left program-locked" id="program-blackbelt">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-4 wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="flagship-image-container rounded-left">
+                                <img src="img/istockphoto-1628291798-612x612.jpg" alt="AI & ML Training" class="responsive-image">
+                                <div class="program-lock-overlay"><i class="fas fa-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s" style="background-color: #f8f9fa; border-radius: 15px; padding: 40px !important; position: relative;">
+                            <h3>3. AI & ML BLACKBELT PLUS — Become an AI Expert</h3>
+                            <p class="mb-3">"Train like a Professional. Think like a Leader."</p>
+                            <p class="mb-3">This is for students who want to master Artificial Intelligence and Machine Learning at a deep level.</p>
+                            <p class="mb-3">In this program, you will:</p>
+                            <ul class="mb-3">
+                                <li>Learn core AI & Machine Learning concepts</li>
+                                <li>Work on real-world AI projects</li>
+                                <li>Build smart models that can predict, analyze, and automate</li>
+                                <li>Create a powerful portfolio that impresses recruiters</li>
+                            </ul>
+                            <p class="mb-4">If you dream of becoming an AI Engineer, Data Scientist, or ML Engineer, this is your ultimate training ground.</p>
+                            <div class="program-lock-msg">Unlock by completing GenAI Pinnacle Plus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Programs End -->
+    <hr class="section-separator-yellow">
 
 
     <!-- Combined Section Start -->
@@ -1256,35 +1267,63 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5">
-                    <h2 class="mb-3" style="color: #000000;">Send Us a Message</h2>
-                    <p class="mb-4" style="color: #666;">Please fill in the form below to get in touch with us.</p>
+                    <h2 class="mb-3" style="color: #000000;">Begin Your AI Journey</h2>
+                    <p class="mb-4" style="color: #666;">Fill out the enquiry form and our team will reach out with complete details about the bootcamp.</p>
                     <form>
                         <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="First name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Last name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Email address" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="tel" class="form-control" placeholder="Phone Number" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Message" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required></textarea>
+                                <input type="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
-                                    <label class="form-check-label" for="agreeTerms" style="color: #000000;">
-                                        I've read and agree with <a href="#" style="color: #000000; text-decoration: underline;">Terms of Service</a> and <a href="#" style="color: #000000; text-decoration: underline;">Privacy Policy</a>
+                                <input type="tel" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                            </div>
+                            
+                            <!-- Checklist Questions -->
+                            <div class="col-12 mt-4">
+                                <h5 style="color: #000000; margin-bottom: 20px;">Quick Questions:</h5>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                                    <input class="form-check-input" type="checkbox" id="question1" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <label class="form-check-label" for="question1" style="color: #000000; margin-left: 10px; font-size: 1rem;">
+                                        Are you a +2 student?
                                     </label>
                                 </div>
                             </div>
+                            
                             <div class="col-12">
-                                <button type="submit" class="btn btn-dark px-5 py-3" style="border-radius: 8px; font-weight: 600;">Submit</button>
+                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                                    <input class="form-check-input" type="checkbox" id="question2" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <label class="form-check-label" for="question2" style="color: #000000; margin-left: 10px; font-size: 1rem;">
+                                        Are you going to be idle for 100+ days?
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                                    <input class="form-check-input" type="checkbox" id="question3" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <label class="form-check-label" for="question3" style="color: #000000; margin-left: 10px; font-size: 1rem;">
+                                        Is AI and Agentic AI the future?
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                                    <input class="form-check-input" type="checkbox" id="question4" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <label class="form-check-label" for="question4" style="color: #000000; margin-left: 10px; font-size: 1rem;">
+                                        Ready to master AI in 100 days?
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
                             </div>
                         </div>
                     </form>
