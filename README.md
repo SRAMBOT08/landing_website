@@ -174,11 +174,7 @@ Three flagship programs with individual showcases:
 
 ### Installation Steps
 
-1. Clone the repository:
-```bash
-git clone https://github.com/SRAMBOT08/landing_website.git
-cd landing_website
-```
+
 
 2. Open the project:
    - Simply open `index.html` in a web browser, or
@@ -314,3 +310,5 @@ For inquiries about the programs or website:
 
 **Last Updated:** January 2026  
 **Maintained by:** SNS Institutions Development Team
+
+Developed by: **Lokesh Kumar M S,Sriram R P**
