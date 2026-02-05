@@ -1081,23 +1081,7 @@
                         </div>
                     </div>
                     
-                    <!-- Testimonial 2 (was 1st) -->
-                    <div class="testimonial-item" style="min-width: 350px; margin: 0 15px;">
-                        <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
-                            <div style="margin-bottom: 20px;">
-                                <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #d0d0d0; margin: 0 auto; overflow: hidden;">
-                                    <img src="img/Screenshot 2026-01-24 113556.png" alt="Lokesh Kumar M S" style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                            </div>
-                            <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem;">
-                                <span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>Learning with Analytics Vidhya has been a great experience. The hands-on approach, industry-relevant content, and expert guidance helped me build a solid foundation in AI and machine learning.<span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>
-                            </p>
-                            <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Lokesh Kumar M S</h5>
-                            <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">2nd CSE</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 (was 2nd) -->
+                    <!-- Testimonial 2 (was 2nd) -->
                     <div class="testimonial-item" style="min-width: 350px; margin: 0 15px;">
                         <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
                             <div style="margin-bottom: 20px;">
@@ -1109,6 +1093,22 @@
                                 <span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>The course structure by Analytics Vidhya is extremely well designed and beginner-friendly. Concepts are explained clearly with real-world examples, making complex AI topics easy to understand.<span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>
                             </p>
                             <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Sriram R P</h5>
+                            <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">2nd CSE</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 (was 1st) -->
+                    <div class="testimonial-item" style="min-width: 350px; margin: 0 15px;">
+                        <div style="background-color: #f5f5f5; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%;">
+                            <div style="margin-bottom: 20px;">
+                                <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #d0d0d0; margin: 0 auto; overflow: hidden;">
+                                    <img src="img/Screenshot 2026-01-24 113556.png" alt="Lokesh Kumar M S" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem;">
+                                <span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>Learning with Analytics Vidhya has been a great experience. The hands-on approach, industry-relevant content, and expert guidance helped me build a solid foundation in AI and machine learning.<span style="color: #ffcc00; font-size: 1.5rem; font-weight: bold;">"</span>
+                            </p>
+                            <h5 style="color: #ffcc00; font-weight: 700; margin: 0; font-size: 1.1rem;">Lokesh Kumar M S</h5>
                             <p style="color: #999; font-size: 0.85rem; margin: 5px 0 0 0;">2nd CSE</p>
                         </div>
                     </div>
@@ -1260,16 +1260,27 @@
                 <div class="modal-body p-5">
                     <h2 class="mb-3" style="color: #000000;">Begin Your AI Journey</h2>
                     <p class="mb-4" style="color: #666;">Fill out the enquiry form and our team will reach out with complete details about the bootcamp.</p>
-                    <form>
+                    
+                    <!-- Success Message -->
+                    <div id="formSuccess" class="alert alert-success" style="display: none; border-radius: 8px;">
+                        <strong>Thank you!</strong> Your enquiry has been submitted successfully. We'll contact you soon!
+                    </div>
+                    
+                    <!-- Error Message -->
+                    <div id="formError" class="alert alert-danger" style="display: none; border-radius: 8px;">
+                        <strong>Oops!</strong> Something went wrong. Please try again.
+                    </div>
+                    
+                    <form id="enquiryForm" action="send-email.php" method="POST">
                         <div class="row g-3">
                             <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="text" name="name" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <input type="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <input type="tel" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             
                             <!-- Checklist Questions -->
@@ -1279,7 +1290,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question1" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" name="plus2_student" id="question1" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question1" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Are you a +2 student?
                                     </label>
@@ -1288,7 +1299,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question2" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" name="100_days_idle" id="question2" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question2" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Are you going to be idle for 100+ days?
                                     </label>
@@ -1297,7 +1308,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question3" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" name="ai_future" id="question3" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question3" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Is AI and Agentic AI the future?
                                     </label>
@@ -1306,7 +1317,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question4" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" name="ready_100_days" id="question4" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question4" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Ready to master AI in 100 days?
                                     </label>
@@ -1314,7 +1325,7 @@
                             </div>
                             
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
+                                <button type="submit" id="submitBtn" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
                             </div>
                         </div>
                     </form>
@@ -1325,22 +1336,86 @@
     <!-- Enrollment Modal End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ffffff; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);">
-        <div class="container text-center py-3">
-            <a href="index.html">
-                <h1 class="mb-2 text-dark text-uppercase" style="font-size: 2rem; font-weight: 700;">SNS Institutions</h1>
-            </a>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="btn btn-sm btn-outline-primary border-2 mx-1" href="https://www.instagram.com/snsinstitutions?igsh=MW9idXFoaDE1OTRsZQ==" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-sm btn-outline-primary border-2 mx-1" href="https://youtube.com/@snsinstitutions?si=vO9yy-WEdR2KZ-lY" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-youtube"></i></a>
-                <a class="btn btn-sm btn-outline-primary border-2 mx-1" href="https://www.linkedin.com/school/snsinstitutions/" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p style="font-size: 0.9rem; margin: 0;">&copy; <a class="border-bottom" href="#">SNS Institutions</a>, All Right Reserved.</p>
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ffffff; box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo Section -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html">
+                        <img src="img/SNS Group Logo.png" alt="SNS Institutions" style="max-width: 180px; margin-bottom: 15px;">
+                    </a>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
+                        Reimagining Business through AI & ML Education Programs
+                    </p>
+                </div>
 
+                <!-- Agentic AI Programs Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 style="color: #000; font-weight: 700; margin-bottom: 20px; font-size: 1.1rem;">Agentic AI Programs</h5>
+                    <div class="d-flex flex-column" style="gap: 10px;">
+                        <a href="#programs" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Foundation Program</a>
+                        <a href="#programs" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Advanced Analytics</a>
+                        <a href="#curriculum" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Generative AI</a>
+                        <a href="#curriculum" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Agentic AI Solutions</a>
+                    </div>
+                </div>
+
+                <!-- Company Section -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 style="color: #000; font-weight: 700; margin-bottom: 20px; font-size: 1.1rem;">Company</h5>
+                    <div class="d-flex flex-column" style="gap: 10px;">
+                        <a href="#about" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">About Us</a>
+                        <a href="#programs" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Programs</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Contact Us</a>
+                        <a href="#testimonial" style="color: #666; text-decoration: none; font-size: 0.9rem; transition: color 0.3s;">Testimonials</a>
+                    </div>
+                </div>
+
+                <!-- Address Section -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 style="color: #000; font-weight: 700; margin-bottom: 20px; font-size: 1.1rem;">Address</h5>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                        SNS Institutions,<br>
+                        Sathy Main Road,<br>
+                        Vazhiyampalayam,<br>
+                        Coimbatore,<br>
+                        Tamil Nadu 641107
+                    </p>
+                </div>
+
+                <!-- Email & Social Section -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 style="color: #000; font-weight: 700; margin-bottom: 20px; font-size: 1.1rem;">Connect</h5>
+                    <div class="d-flex" style="gap: 10px; margin-bottom: 15px;">
+                        <a class="btn btn-sm btn-dark border-0" href="https://www.linkedin.com/school/snsinstitutions/" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 5px;"><i class="fab fa-linkedin-in" style="color: #ffffff;"></i></a>
+                        <a class="btn btn-sm btn-dark border-0" href="https://youtube.com/@snsinstitutions?si=vO9yy-WEdR2KZ-lY" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 5px;"><i class="fab fa-youtube" style="color: #ffffff;"></i></a>
+                        <a class="btn btn-sm btn-dark border-0" href="https://www.instagram.com/snsinstitutions?igsh=MW9idXFoaDE1OTRsZQ==" target="_blank" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 5px;"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
+                    </div>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">
+                        <a href="mailto:info@snsinstitutions.com" style="color: #666; text-decoration: none;">info@snsinstitutions.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="row mt-4 pt-4" style="border-top: 1px solid rgba(0,0,0,0.1);">
+                <div class="col-12 text-center">
+                    <p style="color: #000; font-size: 0.9rem; margin: 0;">© 2025 SNS Institutions. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Footer End -->
 
+    <!-- Floating Enquiry Button -->
+    <div class="floating-enquiry-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a class="floating-whatsapp-btn" href="https://wa.me/1234567890" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1351,6 +1426,59 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- Formspree Form Handling -->
+    <script>
+        document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Hide previous messages
+            formSuccess.style.display = 'none';
+            formError.style.display = 'none';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    formSuccess.style.display = 'block';
+                    form.reset();
+                    
+                    // Auto close modal after 3 seconds
+                    setTimeout(() => {
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
+                        modal.hide();
+                        formSuccess.style.display = 'none';
+                    }, 3000);
+                } else {
+                    // Show error message
+                    formError.style.display = 'block';
+                }
+            } catch (error) {
+                // Show error message
+                formError.style.display = 'block';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Enquiry';
+            }
+        });
+    </script>
 </body>
 
 </html>

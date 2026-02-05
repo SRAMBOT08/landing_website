@@ -810,3 +810,97 @@ html {
 .deep-section-shadow {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Floating Enquiry Button */
+.floating-enquiry-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.floating-enquiry-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+    background: #ffffff;
+}
+
+.floating-enquiry-btn i {
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.floating-enquiry-btn:hover i {
+    color: #000000;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 105px;
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+    background: #ffffff;
+}
+
+.floating-whatsapp-btn i {
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp-btn:hover i {
+    color: #000000;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .floating-enquiry-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+    
+    .floating-enquiry-btn i {
+        font-size: 22px;
+    }
+    
+    .floating-whatsapp-btn {
+        bottom: 20px;
+        right: 90px;
+        width: 55px;
+        height: 55px;
+    }
+    
+    .floating-whatsapp-btn i {
+        font-size: 22px;
+    }
+}
