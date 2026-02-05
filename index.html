@@ -1260,27 +1260,16 @@
                 <div class="modal-body p-5">
                     <h2 class="mb-3" style="color: #000000;">Begin Your AI Journey</h2>
                     <p class="mb-4" style="color: #666;">Fill out the enquiry form and our team will reach out with complete details about the bootcamp.</p>
-                    
-                    <!-- Success Message -->
-                    <div id="formSuccess" class="alert alert-success" style="display: none; border-radius: 8px;">
-                        <strong>Thank you!</strong> Your enquiry has been submitted successfully. We'll contact you soon!
-                    </div>
-                    
-                    <!-- Error Message -->
-                    <div id="formError" class="alert alert-danger" style="display: none; border-radius: 8px;">
-                        <strong>Oops!</strong> Something went wrong. Please try again.
-                    </div>
-                    
-                    <form id="enquiryForm" action="send-email.php" method="POST">
+                    <form>
                         <div class="row g-3">
                             <div class="col-12">
-                                <input type="text" name="name" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="text" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <input type="email" name="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             <div class="col-12">
-                                <input type="tel" name="phone" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
+                                <input type="tel" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
                             </div>
                             
                             <!-- Checklist Questions -->
@@ -1290,7 +1279,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" name="plus2_student" id="question1" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" id="question1" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question1" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Are you a +2 student?
                                     </label>
@@ -1299,7 +1288,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" name="100_days_idle" id="question2" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" id="question2" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question2" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Are you going to be idle for 100+ days?
                                     </label>
@@ -1308,7 +1297,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" name="ai_future" id="question3" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" id="question3" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question3" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Is AI and Agentic AI the future?
                                     </label>
@@ -1317,7 +1306,7 @@
                             
                             <div class="col-12">
                                 <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" name="ready_100_days" id="question4" value="Yes" style="width: 20px; height: 20px; margin-top: 2px;">
+                                    <input class="form-check-input" type="checkbox" id="question4" style="width: 20px; height: 20px; margin-top: 2px;">
                                     <label class="form-check-label" for="question4" style="color: #000000; margin-left: 10px; font-size: 1rem;">
                                         Ready to master AI in 100 days?
                                     </label>
@@ -1325,7 +1314,7 @@
                             </div>
                             
                             <div class="col-12 mt-4">
-                                <button type="submit" id="submitBtn" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
+                                <button type="submit" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
                             </div>
                         </div>
                     </form>
@@ -1376,10 +1365,10 @@
                     <h5 style="color: #000; font-weight: 700; margin-bottom: 20px; font-size: 1.1rem;">Address</h5>
                     <p style="color: #666; font-size: 0.9rem; line-height: 1.8; margin: 0;">
                         SNS Institutions,<br>
-                        Sathy Main Road,<br>
-                        Vazhiyampalayam,<br>
+                        536, Thudiyalur - Saravanampatti Rd,<br>
+                        Vellakinar,<br>
                         Coimbatore,<br>
-                        Tamil Nadu 641107
+                        Tamil Nadu 641029
                     </p>
                 </div>
 
@@ -1426,59 +1415,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    
-    <!-- Formspree Form Handling -->
-    <script>
-        document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const submitBtn = document.getElementById('submitBtn');
-            const formSuccess = document.getElementById('formSuccess');
-            const formError = document.getElementById('formError');
-            
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
-            
-            // Hide previous messages
-            formSuccess.style.display = 'none';
-            formError.style.display = 'none';
-            
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Show success message
-                    formSuccess.style.display = 'block';
-                    form.reset();
-                    
-                    // Auto close modal after 3 seconds
-                    setTimeout(() => {
-                        const modal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
-                        modal.hide();
-                        formSuccess.style.display = 'none';
-                    }, 3000);
-                } else {
-                    // Show error message
-                    formError.style.display = 'block';
-                }
-            } catch (error) {
-                // Show error message
-                formError.style.display = 'block';
-            } finally {
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Enquiry';
-            }
-        });
-    </script>
 </body>
 
 </html>
