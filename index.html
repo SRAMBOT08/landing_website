@@ -1281,7 +1281,32 @@
                                 // Replace in innerHTML to catch all instances
                                 modalBody.innerHTML = modalBody.innerHTML.replace(/&lt;br\s*\/?&gt;/gi, '').replace(/<br\s*\/?>/gi, '');
                             }
-                        }, 1500);
+                        }, 2000);
+                        
+                        // Handle successful form submission with multiple event types
+                        window.addEventListener('b24:form:submit:success', function(event) {
+                            console.log('Form submitted successfully');
+                            setTimeout(function() {
+                                var modal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
+                                if (modal) {
+                                    modal.hide();
+                                }
+                                // Show success message
+                                alert('Thank you for your enquiry! Our team will contact you soon.');
+                            }, 500);
+                        });
+                        
+                        // Alternative event listener for older Bitrix24 versions
+                        window.addEventListener('onCrmFormSubmit', function(event) {
+                            console.log('Form submitted (legacy event)');
+                            setTimeout(function() {
+                                var modal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
+                                if (modal) {
+                                    modal.hide();
+                                }
+                                alert('Thank you for your enquiry! Our team will contact you soon.');
+                            }, 500);
+                        });
                     </script>
                 </div>
             </div>
