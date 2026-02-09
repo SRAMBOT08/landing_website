@@ -1278,16 +1278,10 @@
                         setTimeout(function() {
                             var modalBody = document.querySelector('#enrollModal .modal-body');
                             if (modalBody) {
-                                var walker = document.createTreeWalker(modalBody, NodeFilter.SHOW_TEXT, null, false);
-                                var textNodes = [];
-                                while(walker.nextNode()) textNodes.push(walker.currentNode);
-                                textNodes.forEach(function(node) {
-                                    if (node.textContent.includes('<br />') || node.textContent.includes('<br>')) {
-                                        node.textContent = node.textContent.replace(/<br\s*\/?>/gi, '');
-                                    }
-                                });
+                                // Replace in innerHTML to catch all instances
+                                modalBody.innerHTML = modalBody.innerHTML.replace(/&lt;br\s*\/?&gt;/gi, '').replace(/<br\s*\/?>/gi, '');
                             }
-                        }, 1000);
+                        }, 1500);
                     </script>
                 </div>
             </div>
