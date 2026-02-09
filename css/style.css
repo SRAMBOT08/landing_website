@@ -845,6 +845,51 @@ html {
     color: #000000;
 }
 
+/* Tooltip for phone number */
+.floating-enquiry-btn::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-120px) translateY(10px);
+    bottom: 75px;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.floating-enquiry-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 67px;
+    border: 8px solid transparent;
+    border-top-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.floating-enquiry-btn:hover::before,
+.floating-enquiry-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.floating-enquiry-btn:hover::before {
+    transform: translateX(-120px) translateY(0);
+}
+
 /* Floating WhatsApp Button */
 .floating-whatsapp-btn {
     position: fixed;
@@ -891,6 +936,16 @@ html {
     
     .floating-enquiry-btn i {
         font-size: 22px;
+    }
+    
+    /* Adjust tooltip size for mobile */
+    .floating-enquiry-btn::before {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    
+    .floating-enquiry-btn::after {
+        border-width: 6px;
     }
     
     .floating-whatsapp-btn {

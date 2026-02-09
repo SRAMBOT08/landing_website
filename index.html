@@ -1258,66 +1258,37 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5">
-                    <h2 class="mb-3" style="color: #000000;">Begin Your AI Journey</h2>
-                    <p class="mb-4" style="color: #666;">Fill out the enquiry form and our team will reach out with complete details about the bootcamp.</p>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Name" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="email" class="form-control" placeholder="Email" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="tel" class="form-control" placeholder="Phone" style="background-color: #e8e8e8; border: none; padding: 15px; border-radius: 8px; color: #000000;" required>
-                            </div>
-                            
-                            <!-- Checklist Questions -->
-                            <div class="col-12 mt-4">
-                                <h5 style="color: #000000; margin-bottom: 20px;">Quick Questions:</h5>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question1" style="width: 20px; height: 20px; margin-top: 2px;">
-                                    <label class="form-check-label" for="question1" style="color: #000000; margin-left: 10px; font-size: 1rem;">
-                                        Are you a +2 student?
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question2" style="width: 20px; height: 20px; margin-top: 2px;">
-                                    <label class="form-check-label" for="question2" style="color: #000000; margin-left: 10px; font-size: 1rem;">
-                                        Are you going to be idle for 100+ days?
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question3" style="width: 20px; height: 20px; margin-top: 2px;">
-                                    <label class="form-check-label" for="question3" style="color: #000000; margin-left: 10px; font-size: 1rem;">
-                                        Is AI and Agentic AI the future?
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-check" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                                    <input class="form-check-input" type="checkbox" id="question4" style="width: 20px; height: 20px; margin-top: 2px;">
-                                    <label class="form-check-label" for="question4" style="color: #000000; margin-left: 10px; font-size: 1rem;">
-                                        Ready to master AI in 100 days?
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-dark px-5 py-3 w-100" style="background-color: #000000; border-radius: 8px; font-weight: 600; border: none;">Submit Enquiry</button>
-                            </div>
-                        </div>
-                    </form>
+                    <!-- Bitrix24 CRM Form -->
+                    <script data-b24-form="inline/325/31q0aa" data-skip-moving="true">
+                    (function(w,d,u){
+                    var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://cdn.bitrix24.com/b11752903/crm/form/loader_325.js');
+                    </script>
+                    
+                    <style>
+                        /* Hide the <br /> text in Bitrix24 form */
+                        .b24-form-content {
+                            line-height: 1.4;
+                        }
+                    </style>
+                    
+                    <script>
+                        // Clean up <br /> text after Bitrix24 form loads
+                        setTimeout(function() {
+                            var modalBody = document.querySelector('#enrollModal .modal-body');
+                            if (modalBody) {
+                                var walker = document.createTreeWalker(modalBody, NodeFilter.SHOW_TEXT, null, false);
+                                var textNodes = [];
+                                while(walker.nextNode()) textNodes.push(walker.currentNode);
+                                textNodes.forEach(function(node) {
+                                    if (node.textContent.includes('<br />') || node.textContent.includes('<br>')) {
+                                        node.textContent = node.textContent.replace(/<br\s*\/?>/gi, '');
+                                    }
+                                });
+                            }
+                        }, 1000);
+                    </script>
                 </div>
             </div>
         </div>
@@ -1400,7 +1371,7 @@
     <!-- Footer End -->
 
     <!-- Floating Enquiry Button -->
-    <a class="floating-enquiry-btn" href="tel:+919584595835">
+    <a class="floating-enquiry-btn" href="tel:+919584595835" data-tooltip="+91 9584595835">
         <i class="fas fa-phone"></i>
     </a>
 
