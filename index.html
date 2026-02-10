@@ -1518,6 +1518,52 @@
                     document.body.style.width = '';
                 }
             });
+            
+            // Function to close form and restore scrolling
+            function closeForm() {
+                formModal.classList.remove('show');
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+            }
+            
+            // Listen for Bitrix form submission success
+            window.addEventListener('onCrmFormSubmit', function() {
+                setTimeout(closeForm, 1500); // Close after 1.5 seconds
+            });
+            
+            // Alternative: Listen for Bitrix form success event
+            document.addEventListener('b24:form:submit', function() {
+                setTimeout(closeForm, 1500); // Close after 1.5 seconds
+            });
+            
+            // Fallback: Monitor for success message in the form
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        mutation.addedNodes.forEach(function(node) {
+                            if (node.nodeType === 1) {
+                                const successMessage = node.querySelector('.b24-form-state-success') || 
+                                                      node.classList?.contains('b24-form-state-success') ||
+                                                      (node.innerText && node.innerText.includes('Thank you'));
+                                if (successMessage) {
+                                    setTimeout(closeForm, 2000); // Close after 2 seconds
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Start observing the form container for changes
+            const bitrixContainer = document.getElementById('bitrixFormContainer');
+            if (bitrixContainer) {
+                observer.observe(bitrixContainer, {
+                    childList: true,
+                    subtree: true
+                });
+            }
         })();
     </script>
 </body>
