@@ -563,10 +563,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
     background-color: #ffcc00 !important;
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
+/* Smooth scrolling - moved to inline styles for better control */
 
 /* White text for black background containers - More specific selectors */
 #about [style*="background-color: #000000"] * {
