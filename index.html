@@ -58,99 +58,363 @@
             }
         }
         
-        /* Form Modal Styles */
-        .form-modal-overlay {
+        /* OTP Verification Form Modal Styles */
+        .otp-modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 9999;
+            z-index: 10000;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .form-modal-overlay.show {
+        .otp-modal-overlay.show {
             opacity: 1;
             visibility: visible;
         }
         
-        .form-modal-content {
-            background: white;
-            border-radius: 0;
-            padding: 20px 30px;
-            max-width: 650px;
+        .otp-modal-content {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 24px;
+            padding: 50px 45px;
+            max-width: 480px;
             width: 90%;
-            height: 95vh;
-            max-height: 95vh;
-            overflow: hidden;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transform: scale(0.8);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: none;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transform: scale(0.9) translateY(30px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .form-modal-overlay.show .form-modal-content {
-            transform: scale(1);
+        .otp-modal-overlay.show .otp-modal-content {
+            transform: scale(1) translateY(0);
         }
         
-        .form-modal-close {
+        .otp-modal-close {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #000;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #000, #333);
             color: #fff;
             border: none;
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            z-index: 1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
-        .form-modal-close:hover {
-            background: #ffcc00;
+        .otp-modal-close:hover {
+            background: linear-gradient(135deg, #ffcc00, #ffd700);
             color: #000;
             transform: rotate(90deg);
+            box-shadow: 0 6px 18px rgba(255, 204, 0, 0.4);
         }
         
-        /* Bitrix Form Container Styles */
-        #bitrixFormContainer {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
+        .otp-form-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        .otp-form-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        
+        .otp-form-group {
+            margin-bottom: 25px;
+        }
+        
+        .otp-form-label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .otp-form-input {
             width: 100%;
-            height: 100%;
+            padding: 16px 20px;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #fff;
+            color: #000;
         }
         
-        #bitrixFormContainer iframe {
-            width: 100% !important;
-            min-height: 100%;
+        .otp-form-input:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.1);
+        }
+        
+        .otp-form-input.error {
+            border-color: #ff4444;
+        }
+        
+        .phone-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-input-wrapper:focus-within {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.1);
+        }
+        
+        .phone-input-wrapper.error {
+            border-color: #ff4444;
+        }
+        
+        .phone-country-code {
+            padding: 16px 16px 16px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #000;
+            background: #f8f9fa;
+            border-right: 2px solid #e0e0e0;
+            border-radius: 12px 0 0 12px;
+            user-select: none;
+        }
+        
+        .phone-input-wrapper .otp-form-input {
             border: none;
+            padding: 16px 20px 16px 8px;
+            flex: 1;
         }
         
-        /* Responsive adjustments for form modal */
+        .phone-input-wrapper .otp-form-input:focus {
+            box-shadow: none;
+        }
+        
+        .otp-error-message {
+            color: #ff4444;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            display: none;
+        }
+        
+        .otp-error-message.show {
+            display: block;
+        }
+        
+        .otp-input-container {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .otp-input-box {
+            width: 55px;
+            height: 55px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #fff;
+            color: #000;
+        }
+        
+        .otp-input-box:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.1);
+        }
+        
+        .otp-button {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #000, #333);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .otp-button:hover {
+            background: linear-gradient(135deg, #ffcc00, #ffd700);
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 204, 0, 0.3);
+        }
+        
+        .otp-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .otp-resend-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .otp-resend-link {
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .otp-resend-link:hover {
+            color: #ffcc00;
+        }
+        
+        .otp-resend-link.disabled {
+            color: #ccc;
+            cursor: not-allowed;
+            text-decoration: none;
+        }
+        
+        .otp-step {
+            display: none;
+        }
+        
+        .otp-step.active {
+            display: block;
+        }
+        
+        .otp-success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #fff;
+            animation: successPulse 0.6s ease;
+        }
+        
+        @keyframes successPulse {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Enquiry Form Step Styles */
+        .enquiry-form-fields {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .enquiry-form-fields::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .enquiry-form-fields::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .enquiry-form-fields::-webkit-scrollbar-thumb {
+            background: #ffcc00;
+            border-radius: 10px;
+        }
+        
+        .quick-questions-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #000;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .checkbox-wrapper:hover {
+            background: #f8f9fa;
+        }
+        
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #ffcc00;
+        }
+        
+        .checkbox-wrapper label {
+            font-size: 0.95rem;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+            flex: 1;
+        }
+        
         @media (max-width: 767px) {
-            .form-modal-content {
-                padding: 15px 20px;
-                width: 95%;
-                height: 90vh;
-                max-height: 90vh;
+            .otp-modal-content {
+                padding: 40px 30px;
+            }
+            
+            .otp-form-title {
+                font-size: 1.6rem;
+            }
+            
+            .otp-input-box {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
             }
         }
+        
+        /* Bitrix24 Form Styles */
+        #bitrix24Container {
+            border-radius: 12px;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        #bitrix24Container iframe {
+            border: none;
+            border-radius: 8px;
+        }
+        
+
     </style>
 </head>
 
@@ -171,7 +435,7 @@
                 <a href="#testimonial" class="nav-pill">Testimonial</a>
             </div>
             
-            <button class="btn btn-outline-primary border-2 enroll-btn" id="enquiryBtn">Enquiry Now</button>
+            <button class="btn btn-outline-primary border-2 enroll-btn">Enquiry Now</button>
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
@@ -1092,7 +1356,7 @@
                 <div style="text-align: right; color: #bdbdbd; font-size: 1rem; margin-top: 8px;">- SNS Vision</div>
             </div>
             <div class="text-center mt-4">
-                <a href="https://b24-31djjx.bitrix24.site/crm_form_k5aki/" class="btn btn-warning" style="background: #000000 !important; color: #ffffff !important; font-weight: 700; font-size: 1.15rem; padding: 12px 38px; border-radius: 30px; box-shadow: 0 4px 18px rgba(0,0,0,0.15); border: none;">Enquiry Now</a>
+                <button class="btn btn-warning" style="background: #000000 !important; color: #ffffff !important; font-weight: 700; font-size: 1.15rem; padding: 12px 38px; border-radius: 30px; box-shadow: 0 4px 18px rgba(0,0,0,0.15); border: none;">Enquiry Now</button>
             </div>
         </div>
     </div>
@@ -1374,6 +1638,114 @@
     </div>
     <!-- Footer End -->
 
+    <!-- OTP Verification Modal -->
+    <div class="otp-modal-overlay" id="otpModal">
+        <div class="otp-modal-content">
+            <button class="otp-modal-close" id="closeOtpModal">&times;</button>
+            
+            <!-- Step 1: Phone Number Entry -->
+            <div class="otp-step active" id="phoneStep">
+                <h2 class="otp-form-title">Verify Your Number</h2>
+                <p class="otp-form-subtitle">Enter your phone number to receive a verification code</p>
+                
+                <div class="otp-form-group">
+                    <label class="otp-form-label" for="phoneNumber">Phone Number</label>
+                    <div class="phone-input-wrapper" id="phoneInputWrapper">
+                        <span class="phone-country-code">🇮🇳 +91</span>
+                        <input type="tel" id="phoneNumber" class="otp-form-input" placeholder="Enter 10-digit phone number" maxlength="10">
+                    </div>
+                    <div class="otp-error-message" id="phoneError">Please enter a valid 10-digit phone number</div>
+                </div>
+                
+                <button class="otp-button" id="sendOtpBtn">Send OTP</button>
+            </div>
+            
+            <!-- Step 2: OTP Verification -->
+            <div class="otp-step" id="otpStep">
+                <h2 class="otp-form-title">Enter OTP</h2>
+                <p class="otp-form-subtitle">We've sent a 6-digit code to <span id="displayPhone"></span></p>
+                
+                <div class="otp-form-group">
+                    <label class="otp-form-label">Verification Code</label>
+                    <div class="otp-input-container">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="0">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="1">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="2">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="3">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="4">
+                        <input type="text" class="otp-input-box" maxlength="1" data-index="5">
+                    </div>
+                    <div class="otp-error-message" id="otpError">Invalid OTP. Please try again.</div>
+                </div>
+                
+                <button class="otp-button" id="verifyOtpBtn">Verify OTP</button>
+                
+                <div class="otp-resend-text">
+                    Didn't receive code? <span class="otp-resend-link" id="resendOtpLink">Resend OTP</span>
+                    <span id="resendTimer" style="display:none;"> (Wait <span id="countdown">30</span>s)</span>
+                </div>
+            </div>
+            
+            <!-- Step 3: Enquiry Form -->
+            <div class="otp-step" id="enquiryFormStep">
+                <h2 class="otp-form-title">Begin Your AI Journey</h2>
+                <p class="otp-form-subtitle">Fill out the enquiry form and our team will reach out with complete details about the bootcamp.</p>
+                
+                <div class="enquiry-form-fields">
+                    <div class="otp-form-group">
+                        <label class="otp-form-label" for="userName">Name *</label>
+                        <input type="text" id="userName" class="otp-form-input" placeholder="Enter your name" required>
+                        <div class="otp-error-message" id="nameError">Please enter your name</div>
+                    </div>
+                    
+                    <div class="otp-form-group">
+                        <label class="otp-form-label" for="userEmail">E-Mail *</label>
+                        <input type="email" id="userEmail" class="otp-form-input" placeholder="Enter your email" required>
+                        <div class="otp-error-message" id="emailError">Please enter a valid email</div>
+                    </div>
+                    
+                    <div class="otp-form-group">
+                        <label class="otp-form-label" for="displayMobile">Mobile number *</label>
+                        <input type="text" id="displayMobile" class="otp-form-input" readonly style="background: #f8f9fa; cursor: not-allowed;">
+                    </div>
+                    
+                    <div class="quick-questions-title">Quick Questions:</div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="q1" name="plus2Student">
+                        <label for="q1">Are you a +2 student?</label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="q2" name="idle100Days">
+                        <label for="q2">Are you going to be idle for 100+ days?</label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="q3" name="aiIsFuture">
+                        <label for="q3">Is AI and Agentic AI the future?</label>
+                    </div>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="q4" name="readyToMaster">
+                        <label for="q4">Ready to master AI in 100 days?</label>
+                    </div>
+                </div>
+                
+                <button class="otp-button" id="submitEnquiryBtn" style="margin-top: 20px;">Submit Enquiry!!!</button>
+            </div>
+            
+            <!-- Step 4: Final Success -->
+            <div class="otp-step" id="successStep">
+                <div class="otp-success-icon">
+                    ✓
+                </div>
+                <h2 class="otp-form-title">Thank You!</h2>
+                <p class="otp-form-subtitle">Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Enquiry Button -->
     <a class="floating-enquiry-btn" href="tel:+919584595835" data-tooltip="+91 9584595835">
         <i class="fas fa-phone"></i>
@@ -1384,21 +1756,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Bitrix Form Modal -->
-    <div class="form-modal-overlay" id="formModal">
-        <div class="form-modal-content">
-            <button class="form-modal-close" id="closeFormBtn">&times;</button>
-            <div id="bitrixFormContainer">
-                <!-- Bitrix form will load here -->
-                <script data-b24-form="inline/325/31q0aa" data-skip-moving="true">
-                (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-                })(window,document,'https://cdn.bitrix24.com/b11752903/crm/form/loader_325.js');
-                </script>
-            </div>
-        </div>
-    </div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1409,6 +1767,383 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- OTP Verification Script -->
+    <script>
+        (function() {
+            const otpModal = document.getElementById('otpModal');
+            const closeOtpModal = document.getElementById('closeOtpModal');
+            const phoneStep = document.getElementById('phoneStep');
+            const otpStep = document.getElementById('otpStep');
+            const enquiryFormStep = document.getElementById('enquiryFormStep');
+            const successStep = document.getElementById('successStep');
+            const phoneInput = document.getElementById('phoneNumber');
+            const phoneInputWrapper = document.getElementById('phoneInputWrapper');
+            const sendOtpBtn = document.getElementById('sendOtpBtn');
+            const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+            const submitEnquiryBtn = document.getElementById('submitEnquiryBtn');
+            const resendOtpLink = document.getElementById('resendOtpLink');
+            const phoneError = document.getElementById('phoneError');
+            const otpError = document.getElementById('otpError');
+            const displayPhone = document.getElementById('displayPhone');
+            const displayMobile = document.getElementById('displayMobile');
+            const resendTimer = document.getElementById('resendTimer');
+            const countdown = document.getElementById('countdown');
+            const otpInputs = document.querySelectorAll('.otp-input-box');
+            
+            // Enquiry form fields
+            const userName = document.getElementById('userName');
+            const userEmail = document.getElementById('userEmail');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            
+            let currentPhoneNumber = '';
+            let timerInterval = null;
+            const API_URL = 'http://localhost:3000/api'; // Change this to your server URL
+            
+            // Open modal when enquiry buttons are clicked
+            const enquiryButtons = document.querySelectorAll('.enroll-btn, .btn-warning');
+            enquiryButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openModal();
+                });
+            });
+            
+            function openModal() {
+                otpModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                resetForm();
+            }
+            
+            function closeModal() {
+                otpModal.classList.remove('show');
+                document.body.style.overflow = '';
+                resetForm();
+            }
+            
+            function resetForm() {
+                phoneStep.classList.add('active');
+                otpStep.classList.remove('active');
+                enquiryFormStep.classList.remove('active');
+                successStep.classList.remove('active');
+                phoneInput.value = '';
+                userName.value = '';
+                userEmail.value = '';
+                phoneError.classList.remove('show');
+                otpError.classList.remove('show');
+                nameError.classList.remove('show');
+                emailError.classList.remove('show');
+                otpInputs.forEach(input => input.value = '');
+                document.querySelectorAll('.checkbox-wrapper input[type="checkbox"]').forEach(cb => cb.checked = false);
+                if (timerInterval) clearInterval(timerInterval);
+            }
+            
+            // Close modal
+            closeOtpModal.addEventListener('click', closeModal);
+            
+            otpModal.addEventListener('click', function(e) {
+                if (e.target === otpModal) {
+                    closeModal();
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && otpModal.classList.contains('show')) {
+                    closeModal();
+                }
+            });
+            
+            // Phone number validation
+            phoneInput.addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                phoneError.classList.remove('show');
+                phoneInputWrapper.classList.remove('error');
+            });
+            
+            // Send OTP
+            sendOtpBtn.addEventListener('click', async function() {
+                const phone = phoneInput.value.trim();
+                
+                // Validate 10-digit Indian phone number
+                if (phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
+                    phoneError.classList.add('show');
+                    phoneInputWrapper.classList.add('error');
+                    return;
+                }
+                
+                // Disable button and show loading
+                sendOtpBtn.disabled = true;
+                sendOtpBtn.textContent = 'Sending...';
+                
+                try {
+                    // Call backend API to send OTP
+                    const response = await fetch(`${API_URL}/send-otp`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ phoneNumber: phone })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        currentPhoneNumber = phone;
+                        displayPhone.textContent = `+91-${phone}`;
+                        phoneStep.classList.remove('active');
+                        otpStep.classList.add('active');
+                        otpInputs[0].focus();
+                        startResendTimer();
+                        console.log('✅ OTP sent successfully');
+                    } else {
+                        phoneError.textContent = data.message || 'Failed to send OTP';
+                        phoneError.classList.add('show');
+                        phoneInputWrapper.classList.add('error');
+                    }
+                } catch (error) {
+                    console.error('Error sending OTP:', error);
+                    phoneError.textContent = 'Network error. Please try again.';
+                    phoneError.classList.add('show');
+                    phoneInputWrapper.classList.add('error');
+                } finally {
+                    sendOtpBtn.disabled = false;
+                    sendOtpBtn.textContent = 'Send OTP';
+                }
+            });
+            
+            // OTP Input handling
+            otpInputs.forEach((input, index) => {
+                input.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                    otpError.classList.remove('show');
+                    
+                    if (e.target.value && index < otpInputs.length - 1) {
+                        otpInputs[index + 1].focus();
+                    }
+                });
+                
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                        otpInputs[index - 1].focus();
+                    }
+                });
+                
+                input.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const pasteData = e.clipboardData.getData('text').replace(/[^0-9]/g, '').slice(0, 6);
+                    pasteData.split('').forEach((char, i) => {
+                        if (otpInputs[i]) {
+                            otpInputs[i].value = char;
+                        }
+                    });
+                    if (otpInputs[pasteData.length - 1]) {
+                        otpInputs[pasteData.length - 1].focus();
+                    }
+                });
+            });
+            
+            // Verify OTP
+            verifyOtpBtn.addEventListener('click', async function() {
+                const enteredOTP = Array.from(otpInputs).map(input => input.value).join('');
+                
+                if (enteredOTP.length !== 6) {
+                    otpError.textContent = 'Please enter complete OTP';
+                    otpError.classList.add('show');
+                    return;
+                }
+                
+                // Disable button and show loading
+                verifyOtpBtn.disabled = true;
+                verifyOtpBtn.textContent = 'Verifying...';
+                
+                try {
+                    // Call backend API to verify OTP
+                    const response = await fetch(`${API_URL}/verify-otp`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            phoneNumber: currentPhoneNumber,
+                            otp: enteredOTP
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        otpStep.classList.remove('active');
+                        enquiryFormStep.classList.add('active');
+                        
+                        // Pre-fill mobile number in enquiry form
+                        displayMobile.value = `+91-${currentPhoneNumber}`;
+                        
+                        console.log('✅ OTP verified successfully');
+                    } else {
+                        otpError.textContent = data.message || 'Invalid OTP. Please try again.';
+                        otpError.classList.add('show');
+                        otpInputs.forEach(input => input.value = '');
+                        otpInputs[0].focus();
+                    }
+                } catch (error) {
+                    console.error('Error verifying OTP:', error);
+                    otpError.textContent = 'Network error. Please try again.';
+                    otpError.classList.add('show');
+                } finally {
+                    verifyOtpBtn.disabled = false;
+                    verifyOtpBtn.textContent = 'Verify OTP';
+                }
+            });
+            
+            // Resend OTP
+            resendOtpLink.addEventListener('click', async function() {
+                if (resendOtpLink.classList.contains('disabled')) return;
+                
+                try {
+                    // Call backend API to resend OTP
+                    const response = await fetch(`${API_URL}/resend-otp`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ phoneNumber: currentPhoneNumber })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        console.log('🔄 OTP resent successfully');
+                        otpInputs.forEach(input => input.value = '');
+                        otpError.classList.remove('show');
+                        otpInputs[0].focus();
+                        startResendTimer();
+                    } else {
+                        otpError.textContent = data.message || 'Failed to resend OTP';
+                        otpError.classList.add('show');
+                    }
+                } catch (error) {
+                    console.error('Error resending OTP:', error);
+                    otpError.textContent = 'Network error. Please try again.';
+                    otpError.classList.add('show');
+                }
+            });
+            
+            function startResendTimer() {
+                let timeLeft = 30;
+                resendOtpLink.classList.add('disabled');
+                resendTimer.style.display = 'inline';
+                countdown.textContent = timeLeft;
+                
+                if (timerInterval) clearInterval(timerInterval);
+                
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    countdown.textContent = timeLeft;
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        resendOtpLink.classList.remove('disabled');
+                        resendTimer.style.display = 'none';
+                    }
+                }, 1000);
+            }
+            
+            // Submit Enquiry Form
+            submitEnquiryBtn.addEventListener('click', async function() {
+                // Validate form fields
+                let isValid = true;
+                
+                // Validate name
+                if (!userName.value.trim()) {
+                    nameError.classList.add('show');
+                    userName.classList.add('error');
+                    isValid = false;
+                } else {
+                    nameError.classList.remove('show');
+                    userName.classList.remove('error');
+                }
+                
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!userEmail.value.trim() || !emailRegex.test(userEmail.value)) {
+                    emailError.classList.add('show');
+                    userEmail.classList.add('error');
+                    isValid = false;
+                } else {
+                    emailError.classList.remove('show');
+                    userEmail.classList.remove('error');
+                }
+                
+                if (!isValid) return;
+                
+                // Collect form data
+                const formData = {
+                    name: userName.value.trim(),
+                    email: userEmail.value.trim(),
+                    phone: `+91${currentPhoneNumber}`,
+                    plus2Student: document.getElementById('q1').checked,
+                    idle100Days: document.getElementById('q2').checked,
+                    aiIsFuture: document.getElementById('q3').checked,
+                    readyToMaster: document.getElementById('q4').checked,
+                    submittedAt: new Date().toISOString()
+                };
+                
+                // Disable button and show loading
+                submitEnquiryBtn.disabled = true;
+                submitEnquiryBtn.textContent = 'Submitting...';
+                
+                try {
+                    // Send to backend API
+                    const response = await fetch(`${API_URL}/submit-enquiry`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        console.log('✅ Enquiry submitted successfully:', formData);
+                        console.log('📧 Data will be sent to Bitrix24 CRM in backend');
+                        
+                        // Show success step directly
+                        enquiryFormStep.classList.remove('active');
+                        successStep.classList.add('active');
+                        
+                        // Close modal after 3 seconds
+                        setTimeout(() => {
+                            closeModal();
+                        }, 3000);
+                    } else {
+                        alert(data.message || 'Failed to submit enquiry. Please try again.');
+                    }
+                    
+                } catch (error) {
+                    console.error('Error submitting enquiry:', error);
+                    alert('Network error. Please try again.');
+                } finally {
+                    submitEnquiryBtn.disabled = false;
+                    submitEnquiryBtn.textContent = 'Submit Enquiry!!!';
+                }
+            });
+            
+            // Clear errors on input
+            userName.addEventListener('input', function() {
+                nameError.classList.remove('show');
+                userName.classList.remove('error');
+            });
+            
+            userEmail.addEventListener('input', function() {
+                emailError.classList.remove('show');
+                userEmail.classList.remove('error');
+            });
+            
+            // NOTE: Bitrix24 form removed from UI - data now submitted to CRM via backend API only
+        })();
+    </script>
     
     <!-- Spline Cache Buster Script -->
     <script>
@@ -1425,113 +2160,7 @@
         });
     </script>
     
-    <!-- Form Modal Script -->
-    <script>
-        (function() {
-            const formModal = document.getElementById('formModal');
-            const enquiryBtn = document.getElementById('enquiryBtn');
-            const closeFormBtn = document.getElementById('closeFormBtn');
-            
-            // Show form automatically after animations complete (5 seconds)
-            setTimeout(function() {
-                formModal.classList.add('show');
-                document.documentElement.style.overflow = 'hidden';
-                document.body.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-                document.body.style.width = '100%';
-            }, 5000);
-            
-            // Open form when clicking enquiry button
-            if (enquiryBtn) {
-                enquiryBtn.addEventListener('click', function() {
-                    formModal.classList.add('show');
-                    document.documentElement.style.overflow = 'hidden';
-                    document.body.style.overflow = 'hidden';
-                    document.body.style.position = 'fixed';
-                    document.body.style.width = '100%';
-                });
-            }
-            
-            // Close form when clicking close button
-            if (closeFormBtn) {
-                closeFormBtn.addEventListener('click', function() {
-                    formModal.classList.remove('show');
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
-                    document.body.style.position = '';
-                    document.body.style.width = '';
-                });
-            }
-            
-            // Close form when clicking outside
-            formModal.addEventListener('click', function(e) {
-                if (e.target === formModal) {
-                    formModal.classList.remove('show');
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
-                    document.body.style.position = '';
-                    document.body.style.width = '';
-                }
-            });
-            
-            // Close form with ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && formModal.classList.contains('show')) {
-                    formModal.classList.remove('show');
-                    document.documentElement.style.overflow = '';
-                    document.body.style.overflow = '';
-                    document.body.style.position = '';
-                    document.body.style.width = '';
-                }
-            });
-            
-            // Function to close form and restore scrolling
-            function closeForm() {
-                formModal.classList.remove('show');
-                document.documentElement.style.overflow = '';
-                document.body.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.width = '';
-            }
-            
-            // Listen for Bitrix form submission success
-            window.addEventListener('onCrmFormSubmit', function() {
-                setTimeout(closeForm, 1500); // Close after 1.5 seconds
-            });
-            
-            // Alternative: Listen for Bitrix form success event
-            document.addEventListener('b24:form:submit', function() {
-                setTimeout(closeForm, 1500); // Close after 1.5 seconds
-            });
-            
-            // Fallback: Monitor for success message in the form
-            const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.addedNodes.length) {
-                        mutation.addedNodes.forEach(function(node) {
-                            if (node.nodeType === 1) {
-                                const successMessage = node.querySelector('.b24-form-state-success') || 
-                                                      node.classList?.contains('b24-form-state-success') ||
-                                                      (node.innerText && node.innerText.includes('Thank you'));
-                                if (successMessage) {
-                                    setTimeout(closeForm, 2000); // Close after 2 seconds
-                                }
-                            }
-                        });
-                    }
-                });
-            });
-            
-            // Start observing the form container for changes
-            const bitrixContainer = document.getElementById('bitrixFormContainer');
-            if (bitrixContainer) {
-                observer.observe(bitrixContainer, {
-                    childList: true,
-                    subtree: true
-                });
-            }
-        })();
-    </script>
+
 </body>
 
 </html>
